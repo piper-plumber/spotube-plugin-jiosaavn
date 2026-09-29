@@ -1,0 +1,104 @@
+info:
+  name: getTopShows
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{base_url}}?__call=content.getTopShows&api_version=4&_format=json&_marker=0&ctx=web6dot0"
+  params:
+    - name: __call
+      value: content.getTopShows
+      type: query
+    - name: api_version
+      value: "4"
+      type: query
+    - name: _format
+      value: json
+      type: query
+    - name: _marker
+      value: "0"
+      type: query
+    - name: ctx
+      value: web6dot0
+      type: query
+    - name: n
+      value: "20"
+      type: query
+    - name: p
+      value: "1"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: "200"
+    request:
+      url: "{{base_url}}?__call=content.getTopShows&api_version=4&_format=json&_marker=0&ctx=web6dot0"
+      method: GET
+      params:
+        - name: __call
+          value: content.getTopShows
+          type: query
+        - name: api_version
+          value: "4"
+          type: query
+        - name: _format
+          value: json
+          type: query
+        - name: _marker
+          value: "0"
+          type: query
+        - name: ctx
+          value: web6dot0
+          type: query
+        - name: n
+          value: "20"
+          type: query
+        - name: p
+          value: "1"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: text/html; charset=UTF-8
+        - name: content-length
+          value: "1928"
+        - name: referrer-policy
+          value: strict-origin-when-cross-origin
+        - name: vary
+          value: User-Agent,Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: permissions-policy
+          value: accelerometer=(self), camera=(self), display-capture=(self), fullscreen=(self), gyroscope=(self), magnetometer=(self), picture-in-picture=(self), screen-wake-lock=(self), xr-spatial-tracking=(self)
+        - name: content-security-policy
+          value: object-src 'none'; connect-src 'self' https://identitytoolkit.googleapis.com https://securepubads.g.doubleclick.net https://www.google-analytics.com https://hbopenbid.pubmatic.com https://pagead2.googlesyndication.com *.pubmatic.com; font-src 'self' https://fonts.gstatic.com data:; frame-src 'self' *.safeframe.googlesyndication.com https://ads.pubmatic.com https://www.google.com; worker-src 'none';manifest-src 'self';
+        - name: x-be-latency
+          value: 134-23
+        - name: x-frame-options
+          value: DENY
+        - name: expires
+          value: Thu, 28 May 2026 13:24:54 GMT
+        - name: cache-control
+          value: max-age=0, no-cache, no-store
+        - name: pragma
+          value: no-cache
+        - name: date
+          value: Thu, 28 May 2026 13:24:54 GMT
+        - name: connection
+          value: keep-alive
+        - name: alt-svc
+          value: h3=":443"; ma=93600
+        - name: strict-transport-security
+          value: max-age=63072000 ; includeSubDomains
+      body:
+        type: html
+        data: '{"data":[{"id":"62","title":"Talking Music","subtitle":"","type":"show","image":"https:\/\/c.sop.saavncdn.com\/Talking-Music-20230310083831.jpg","perma_url":"https:\/\/www.jiosaavn.com\/shows\/talking-music\/3\/PjReFP-Sguk_","more_info":{"season_number":"3","release_date":"2021-06-22","year":"","badge":"","square_image":"https:\/\/c.sop.saavncdn.com\/Talking-Music-20230310083848-500x500.jpg"},"explicit_content":"0","mini_obj":true},{"id":"175427","title":"Such a Drag","subtitle":"","type":"show","image":"https:\/\/c.sop.saavncdn.com\/Such-a-Drag-20220203145825.jpg","perma_url":"https:\/\/www.jiosaavn.com\/shows\/such-a-drag\/1\/VypzBimFtiI_","more_info":{"season_number":"1","release_date":"2022-04-12","year":"","badge":"","square_image":"https:\/\/c.sop.saavncdn.com\/Such-a-Drag-20220203145837-500x500.jpg"},"explicit_content":"1","mini_obj":true},{"id":"211168","title":"Suzhal - The Vortex","subtitle":"","type":"show","image":"https:\/\/c.sop.saavncdn.com\/Suzhal-The-Vortex-20220618175822.jpg","perma_url":"https:\/\/www.jiosaavn.com\/shows\/suzhal-the-vortex\/1\/BtjXBaSPVe0_","more_info":{"season_number":"1","release_date":"2022-06-17","year":"","badge":"","square_image":"https:\/\/c.sop.saavncdn.com\/Suzhal-The-Vortex-20220617174341-500x500.jpg"},"explicit_content":"0","mini_obj":true},{"id":"155493","title":"Moneywise","subtitle":"","type":"show","image":"https:\/\/c.sop.saavncdn.com\/Moneywise-20251122143955-BG.jpg","perma_url":"https:\/\/www.jiosaavn.com\/shows\/moneywise\/1\/hIroOx2XjrU_","more_info":{"season_number":"1","release_date":"2025-11-21","year":"","badge":"","square_image":"https:\/\/c.sop.saavncdn.com\/Moneywise-20251122143955-500x500.jpg"},"explicit_content":"0","mini_obj":true},{"id":"34","title":"Kahaani Express with Neelesh Misra","subtitle":"","type":"show","image":"https:\/\/c.sop.saavncdn.com\/Kahaani-Express-with-Neelesh-Misra-20201026205812.jpg","perma_url":"https:\/\/www.jiosaavn.com\/shows\/kahaani-express-with-neelesh-misra\/1\/zkv096yLB7I_","more_info":{"season_number":"1","release_date":"2019-07-30","year":"","badge":"","square_image":"https:\/\/c.sop.saavncdn.com\/Kahaani-Express-with-Neelesh-Misra-20201026205850-500x500.jpg"},"explicit_content":"0","mini_obj":true},{"id":"64649","title":"Ek Geet Sau Afsane","subtitle":"","type":"show","image":"https:\/\/c.sop.saavncdn.com\/Ek-Geet-Sau-Afsane-20210324034923-BG.jpg","perma_url":"https:\/\/www.jiosaavn.com\/shows\/ek-geet-sau-afsane\/1\/KNFxHyfBS7E_","more_info":{"season_number":"1","release_date":"2023-08-15","year":"","badge":"","square_image":"https:\/\/c.sop.saavncdn.com\/Ek-Geet-Sau-Afsane-20210324034923-500x500.jpg"},"explicit_content":"0","mini_obj":true},{"id":"205847","title":"The American Serial Killer Guidebook","subtitle":"","type":"show","image":"https:\/\/c.sop.saavncdn.com\/The-American-Serial-Killer-Guidebook-20231129153836-BG.jpg","perma_url":"https:\/\/www.jiosaavn.com\/shows\/the-american-serial-killer-guidebook\/1\/KoIx6pKw4lo_","more_info":{"season_number":"1","release_date":"2022-05-22","year":"","badge":"","square_image":"https:\/\/c.sop.saavncdn.com\/The-American-Serial-Killer-Guidebook-20231129153836-500x500.jpg"},"explicit_content":"1","mini_obj":true},{"id":"28","title":"Bhai Ke Raapchik Reviews","subtitle":"","type":"show","image":"https:\/\/c.sop.saavncdn.com\/Bhai-Ke-Raapchik-Reviews-20231221103811-BG.jpg","perma_url":"https:\/\/www.jiosaavn.com\/shows\/bhai-ke-raapchik-reviews\/1\/G6ShbRsqqmc_","more_info":{"season_number":"1","release_date":"2023-12-21","year":"","badge":"","square_image":"https:\/\/c.sop.saavncdn.com\/Bhai-Ke-Raapchik-Reviews-20231221103823-500x500.jpg"},"explicit_content":"0","mini_obj":true},{"id":"199481","title":"Kannagi Kaviyam Tamil Podcast","subtitle":"","type":"show","image":"https:\/\/c.sop.saavncdn.com\/Kannagi-Kaviyam-Tamil-Podcast-20221117211708-BG.jpg","perma_url":"https:\/\/www.jiosaavn.com\/shows\/kannagi-kaviyam-tamil-podcast\/1\/8qUZzpMyu6c_","more_info":{"season_number":"1","release_date":"2023-01-02","year":"","badge":"","square_image":"https:\/\/c.sop.saavncdn.com\/Kannagi-Kaviyam-Tamil-Podcast-20221117211708-500x500.jpg"},"explicit_content":"0","mini_obj":true},{"id":"736","title":"NL Charcha","subtitle":"","type":"show","image":"https:\/\/c.sop.saavncdn.com\/NL-Charcha-20201223095925-BG.jpg","perma_url":"https:\/\/www.jiosaavn.com\/shows\/nl-charcha\/1\/L91z-RKTxAU_","more_info":{"season_number":"1","release_date":"2026-05-23","year":"","badge":"","square_image":"https:\/\/c.sop.saavncdn.com\/NL-Charcha-20201223095925-500x500.jpg"},"explicit_content":"0","mini_obj":true},{"id":"52397","title":"Holistic Lifestyle With Neha Ranglani","subtitle":"","type":"show","image":"https:\/\/c.sop.saavncdn.com\/Holistic-Lifestyle-With-Neha-Ranglani-20201223043832.jpg","perma_url":"https:\/\/www.jiosaavn.com\/shows\/holistic-lifestyle-with-neha-ranglani\/1\/HQdlAIDWXJo_","more_info":{"season_number":"1","release_date":"2021-12-27","year":"","badge":"","square_image":"https:\/\/c.sop.saavncdn.com\/Holistic-Lifestyle-With-Neha-Ranglani-20201223043842-500x500.jpg"},"explicit_content":"0","mini_obj":true},{"id":"33128","title":"Indian Murder Mystery","subtitle":"","type":"show","image":"https:\/\/c.sop.saavncdn.com\/Indian-Murder-Mystery-20220704123807-BG.jpg","perma_url":"https:\/\/www.jiosaavn.com\/shows\/indian-murder-mystery\/1\/SSF-wn2eLXI_","more_info":{"season_number":"1","release_date":"2020-11-19","year":"","badge":"","square_image":"https:\/\/c.sop.saavncdn.com\/Indian-Murder-Mystery-20220704123807-500x500.jpg"},"explicit_content":"0","mini_obj":true},{"id":"104789","title":"In Focus by The Hindu","subtitle":"","type":"show","image":"https:\/\/c.sop.saavncdn.com\/In-Focus-by-The-Hindu-20251004072534-BG.jpg","perma_url":"https:\/\/www.jiosaavn.com\/shows\/in-focus-by-the-hindu\/1\/fhPF5RhlK3k_","more_info":{"season_number":"1","release_date":"2026-05-27","year":"","badge":"","square_image":"https:\/\/c.sop.saavncdn.com\/In-Focus-by-The-Hindu-20251004072534-500x500.jpg"},"explicit_content":"0","mini_obj":true},{"id":"71920","title":"LGBT Kyun?","subtitle":"","type":"show","image":"https:\/\/c.sop.saavncdn.com\/LGBT-Kyun-20210602112725-BG.jpg","perma_url":"https:\/\/www.jiosaavn.com\/shows\/lgbt-kyun\/1\/5H8KE2tcx98_","more_info":{"season_number":"1","release_date":"2021-07-29","year":"","badge":"","square_image":"https:\/\/c.sop.saavncdn.com\/LGBT-Kyun-20210602112725-500x500.jpg"},"explicit_content":"0","mini_obj":true},{"id":"9046","title":"Raising Parents","subtitle":"","type":"show","image":"https:\/\/c.sop.saavncdn.com\/Raising-Parents-20220208154322.jpg","perma_url":"https:\/\/www.jiosaavn.com\/shows\/raising-parents\/2\/d87cdhM-eIg_","more_info":{"season_number":"2","release_date":"2022-03-23","year":"","badge":"","square_image":"https:\/\/c.sop.saavncdn.com\/Raising-Parents-20210722042637-500x500.jpg"},"explicit_content":"0","mini_obj":true},{"id":"183669","title":"\u0926\u093f\u0928\u092d\u0930: \u092a\u0942\u0930\u093e \u0926\u093f\u0928,\u092a\u0942\u0930\u0940 \u0916\u093c\u092c\u0930 (Dinbhar)","subtitle":"","type":"show","image":"https:\/\/c.sop.saavncdn.com\/-20220311125422-BG.jpg","perma_url":"https:\/\/www.jiosaavn.com\/shows\/%e0%a4%a6%e0%a4%bf%e0%a4%a8%e0%a4%ad%e0%a4%b0-%e0%a4%aa%e0%a5%82%e0%a4%b0%e0%a4%be-%e0%a4%a6%e0%a4%bf%e0%a4%a8%e0%a4%aa%e0%a5%82%e0%a4%b0%e0%a5%80-%e0%a4%96%e0%a4%bc%e0%a4%ac%e0%a4%b0-dinbhar\/1\/ZBludb0NoRM_","more_info":{"season_number":"1","release_date":"2026-05-27","year":"","badge":"","square_image":"https:\/\/c.sop.saavncdn.com\/-20220311125422-500x500.jpg"},"explicit_content":"0","mini_obj":true},{"id":"174786","title":"Kya Woh Sach Tha","subtitle":"","type":"show","image":"https:\/\/c.sop.saavncdn.com\/Kya-Woh-Sach-Tha-20250219071910-BG.jpg","perma_url":"https:\/\/www.jiosaavn.com\/shows\/kya-woh-sach-tha\/1\/,eI,wxvKSqU_","more_info":{"season_number":"1","release_date":"2019-12-07","year":"","badge":"","square_image":"https:\/\/c.sop.saavncdn.com\/Kya-Woh-Sach-Tha-20250219071910-500x500.jpg"},"explicit_content":"0","mini_obj":true},{"id":"206431","title":"The Things I Thought About When My Body Was Trying to Kill Me","subtitle":"","type":"show","image":"https:\/\/c.sop.saavncdn.com\/The-Things-I-Thought-About-When-My-Body-Was-Trying-to-Kill-Me-20231004173621-BG.jpg","perma_url":"https:\/\/www.jiosaavn.com\/shows\/the-things-i-thought-about-when-my-body-was-trying-to-kill-me\/1\/1qlp1umuyT8_","more_info":{"season_number":"1","release_date":"2022-07-21","year":"","badge":"","square_image":"https:\/\/c.sop.saavncdn.com\/The-Things-I-Thought-About-When-My-Body-Was-Trying-to-Kill-Me-20231004173621-500x500.jpg"},"explicit_content":"0","mini_obj":true},{"id":"201586","title":"Talking Womb","subtitle":"","type":"show","image":"https:\/\/c.sop.saavncdn.com\/Talking-Womb-20231120195416-BG.jpg","perma_url":"https:\/\/www.jiosaavn.com\/shows\/talking-womb\/1\/nrHzjX6ueJo_","more_info":{"season_number":"1","release_date":"2023-05-21","year":"","badge":"","square_image":"https:\/\/c.sop.saavncdn.com\/Talking-Womb-20231120195416-500x500.jpg"},"explicit_content":"0","mini_obj":true},{"id":"25","title":"#NoFilterNeha","subtitle":"","type":"show","image":"https:\/\/c.sop.saavncdn.com\/NoFilterNeha-20240411113701-BG.jpg","perma_url":"https:\/\/www.jiosaavn.com\/shows\/nofilterneha\/5\/LT7jKx2kHgw_","more_info":{"season_number":"5","release_date":"2020-11-17","year":"","badge":"","square_image":"https:\/\/c.sop.saavncdn.com\/NoFilterNeha-20240411113723-500x500.jpg"},"explicit_content":"1","mini_obj":true}],"last_page":false,"trendingPodcasts":[{"items":null}]}'

@@ -1,0 +1,37 @@
+info:
+  name: unfollow
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}?__call=social.unfollow&api_version=4&_format=json&_marker=0&ctx=web6dot0"
+  params:
+    - name: __call
+      value: social.unfollow
+      type: query
+    - name: api_version
+      value: "4"
+      type: query
+    - name: _format
+      value: json
+      type: query
+    - name: _marker
+      value: "0"
+      type: query
+    - name: ctx
+      value: web6dot0
+      type: query
+    - name: entity_id
+      value: "902306817"
+      type: query
+    - name: entity_type
+      value: playlist
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

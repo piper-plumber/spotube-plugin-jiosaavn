@@ -1,0 +1,66 @@
+info:
+  name: makePublic
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{base_url}}?__call=playlist.makePublic&listid=1300915066&api_version=4&_format=json&_marker=0&ctx=web6dot0"
+  params:
+    - name: __call
+      value: playlist.makePublic
+      type: query
+    - name: listid
+      value: "1300915066"
+      type: query
+    - name: api_version
+      value: "4"
+      type: query
+    - name: _format
+      value: json
+      type: query
+    - name: _marker
+      value: "0"
+      type: query
+    - name: ctx
+      value: web6dot0
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: "201"
+    request:
+      url: "{{base_url}}/api.php?__call=playlist.makePrivate&listid=1300915066&api_version=4&_format=json&_marker=0&ctx=web6dot0"
+      method: GET
+      params:
+        - name: __call
+          value: playlist.makePrivate
+          type: query
+        - name: listid
+          value: "1300915066"
+          type: query
+        - name: api_version
+          value: "4"
+          type: query
+        - name: _format
+          value: json
+          type: query
+        - name: _marker
+          value: "0"
+          type: query
+        - name: ctx
+          value: web6dot0
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |
+          {"status":"success","details":{"id":"1300915066","title":"My Playlist","subtitle":"Just Updated","header_desc":"","type":"playlist","perma_url":"https:\/\/www.jiosaavn.com\/s\/playlist\/fd4fecfca25e8f2ec4bd8dd4e0aa7293\/my-playlist\/NqbdWo4BkKpAI5VmDfZSSg__","image":"https:\/\/static.saavncdn.com\/_i\/3.0\/playlist-default.png","language":"","year":"","play_count":"","explicit_content":"0","list_count":"0","list_type":"","list":"","more_info":{"listid":"1300915066","listname":"My Playlist","uid":"fd4fecfca25e8f2ec4bd8dd4e0aa7293","favourite":"0","contents":"","song_count":"0","video_count":"0","follower_count":"0","share":"1","firstname":"","lastname":"","is_followed":"0","last_updated":"1780038043"},"button_tooltip_info":[],"pro_hva_campaigns":[]}}

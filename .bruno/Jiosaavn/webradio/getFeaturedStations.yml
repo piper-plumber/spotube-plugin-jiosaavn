@@ -1,0 +1,98 @@
+info:
+  name: getFeaturedStations
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}?__call=webradio.getFeaturedStations&api_version=4&_format=json&_marker=0&ctx=web6dot0"
+  params:
+    - name: __call
+      value: webradio.getFeaturedStations
+      type: query
+    - name: api_version
+      value: "4"
+      type: query
+    - name: _format
+      value: json
+      type: query
+    - name: _marker
+      value: "0"
+      type: query
+    - name: ctx
+      value: web6dot0
+      type: query
+    - name: language
+      value: hindi
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: "200"
+    request:
+      url: "{{base_url}}?__call=webradio.getFeaturedStations&api_version=4&_format=json&_marker=0&ctx=web6dot0"
+      method: GET
+      params:
+        - name: __call
+          value: webradio.getFeaturedStations
+          type: query
+        - name: api_version
+          value: "4"
+          type: query
+        - name: _format
+          value: json
+          type: query
+        - name: _marker
+          value: "0"
+          type: query
+        - name: ctx
+          value: web6dot0
+          type: query
+        - name: language
+          value: hindi
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: text/html; charset=UTF-8
+        - name: content-length
+          value: "1922"
+        - name: referrer-policy
+          value: strict-origin-when-cross-origin
+        - name: vary
+          value: User-Agent,Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: permissions-policy
+          value: accelerometer=(self), camera=(self), display-capture=(self), fullscreen=(self), gyroscope=(self), magnetometer=(self), picture-in-picture=(self), screen-wake-lock=(self), xr-spatial-tracking=(self)
+        - name: content-security-policy
+          value: object-src 'none'; connect-src 'self' https://identitytoolkit.googleapis.com https://securepubads.g.doubleclick.net https://www.google-analytics.com https://hbopenbid.pubmatic.com https://pagead2.googlesyndication.com *.pubmatic.com; font-src 'self' https://fonts.gstatic.com data:; frame-src 'self' *.safeframe.googlesyndication.com https://ads.pubmatic.com https://www.google.com; worker-src 'none';manifest-src 'self';
+        - name: x-be-latency
+          value: 181-19
+        - name: x-frame-options
+          value: DENY
+        - name: expires
+          value: Thu, 28 May 2026 13:27:28 GMT
+        - name: cache-control
+          value: max-age=0, no-cache, no-store
+        - name: pragma
+          value: no-cache
+        - name: date
+          value: Thu, 28 May 2026 13:27:28 GMT
+        - name: connection
+          value: keep-alive
+        - name: alt-svc
+          value: h3=":443"; ma=93600
+        - name: strict-transport-security
+          value: max-age=63072000 ; includeSubDomains
+      body:
+        type: html
+        data: "[{\"id\":\"Shri Sai Baba\",\"title\":\"Shri Sai Baba\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/ShriSaiBaba_saavn_radio_20201231132105_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Shri-Sai-Baba\",\"more_info\":{\"description\":\"\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#919191\",\"language\":\"hindi\",\"station_display_text\":\"Shri Sai Baba\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Jai Hanuman\",\"title\":\"Jai Hanuman\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/JaiHanuman_saavn_radio_20230405081508_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Jai-Hanuman\",\"more_info\":{\"description\":\"\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#9e3e3e\",\"language\":\"hindi\",\"station_display_text\":\"Jai Hanuman\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Desi Hip Hop\",\"title\":\"Desi Hip Hop\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/DesiHipHop_saavn_radio_20210331122730_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Desi-Hip-Hop\",\"more_info\":{\"description\":\"\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#0743f5\",\"language\":\"hindi\",\"station_display_text\":\"Desi Hip Hop\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Jai Jinendra\",\"title\":\"Jai Jinendra\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/JaiJinendra_saavn_radio_20220809142934_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Jai-Jinendra\",\"more_info\":{\"description\":\"\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#055db5\",\"language\":\"hindi\",\"station_display_text\":\"Jai Jinendra\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Dukhi Mann\",\"title\":\"Dukhi Mann\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/FeelingSad_saavn_radio_20201120115705_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Dukhi-Mann\",\"more_info\":{\"description\":\"\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#915656\",\"language\":\"hindi\",\"station_display_text\":\"Dukhi Mann\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Unlimited Khushiyan\",\"title\":\"Unlimited Khushiyan\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/HappyTunes_saavn_radio_20211129082209_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Unlimited-Khushiyan\",\"more_info\":{\"description\":\"Pump Up The Good Vibes & Let Your Spirits Soar!\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#a34202\",\"language\":\"hindi\",\"station_display_text\":\"Unlimited Khushiyan\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Yeshu Masih\",\"title\":\"Yeshu Masih\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/YeshuMasih_saavn_radio_20211203122614_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Yeshu-Masih\",\"more_info\":{\"description\":\"\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#576362\",\"language\":\"hindi\",\"station_display_text\":\"Yeshu Masih\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Chill Karo\",\"title\":\"Chill Karo\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/Chill_saavn_radio_20211129080934_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Chill-Karo\",\"more_info\":{\"description\":\"Your Destination to Relax and Unwind. Just Chill.\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#7f9651\",\"language\":\"hindi\",\"station_display_text\":\"Chill Karo\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Drivetime Dhun\",\"title\":\"Drivetime Dhun\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/DrivetimeTunes_saavn_radio_20211129081831_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Drivetime-Dhun\",\"more_info\":{\"description\":\"Bumper to Bumper with Bollywood!\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#bd6800\",\"language\":\"hindi\",\"station_display_text\":\"Drivetime Dhun\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Nirgun Bhakti\",\"title\":\"Nirgun Bhakti\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/NirgunBhakti_saavn_radio_20201231131533_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Nirgun-Bhakti\",\"more_info\":{\"description\":\"\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#cc00f5\",\"language\":\"hindi\",\"station_display_text\":\"Nirgun Bhakti\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Baal Geet\",\"title\":\"Baal Geet\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/BaalGeet_saavn_radio_20210528092613_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Baal-Geet\",\"more_info\":{\"description\":\"\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#e86807\",\"language\":\"hindi\",\"station_display_text\":\"Baal Geet\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Jai Ambe Mata\",\"title\":\"Jai Ambe Mata\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/JaiAmbeMata_saavn_radio_20220322113706_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Jai-Ambe-Mata\",\"more_info\":{\"description\":\"\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#bf4739\",\"language\":\"hindi\",\"station_display_text\":\"Jai Ambe Mata\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Jai Shiv Shankar\",\"title\":\"Jai Shiv Shankar\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/JaiShivShankar_saavn_radio_20210226154640_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Jai-Shiv-Shankar\",\"more_info\":{\"description\":\"\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#737373\",\"language\":\"hindi\",\"station_display_text\":\"Jai Shiv Shankar\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Pyaar Ka Safar\",\"title\":\"Pyaar Ka Safar\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/LoveNotes_saavn_radio_20211115090755_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Pyaar-Ka-Safar\",\"more_info\":{\"description\":\"The Perfect Destination for the most Heart-warming, Earnest Love Songs\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#9c0000\",\"language\":\"hindi\",\"station_display_text\":\"Pyaar Ka Safar\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Bhajan Sagar\",\"title\":\"Bhajan Sagar\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/BhajanSagar_saavn_radio_20211129080622_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Bhajan-Sagar\",\"more_info\":{\"description\":\"Let's Dive into the Ocean of Hinduism, with Bhajan Sagar!\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#542f2d\",\"language\":\"hindi\",\"station_display_text\":\"Bhajan Sagar\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Hindustani Sangeet\",\"title\":\"Hindustani Sangeet\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/HindustaniSangeet_saavn_radio_20210528093123_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Hindustani-Sangeet\",\"more_info\":{\"description\":\"\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#510487\",\"language\":\"hindi\",\"station_display_text\":\"Hindustani Sangeet\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Hindi Jhankar Beats\",\"title\":\"Hindi Jhankar Beats\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/JhankarBeats_saavn_radio_20201215120219_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Hindi-Jhankar-Beats\",\"more_info\":{\"description\":\"\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#008f81\",\"language\":\"hindi\",\"station_display_text\":\"Hindi Jhankar Beats\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Bollywood 2000s\",\"title\":\"Bollywood 2000s\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/BollywoodY2K_saavn_radio_20210331123208_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Bollywood-2000s\",\"more_info\":{\"description\":\"\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#ed8e09\",\"language\":\"hindi\",\"station_display_text\":\"Bollywood 2000s\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Shri Hari Narayan\",\"title\":\"Shri Hari Narayan\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/ShriHariNarayan_saavn_radio_20230621123706_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Shri-Hari-Narayan\",\"more_info\":{\"description\":\"\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#048c0d\",\"language\":\"hindi\",\"station_display_text\":\"Shri Hari Narayan\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Jai Shri Krishna\",\"title\":\"Jai Shri Krishna\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/JaiShriKrishna_saavn_radio_20210129122546_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Jai-Shri-Krishna\",\"more_info\":{\"description\":\"\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#e009a7\",\"language\":\"hindi\",\"station_display_text\":\"Jai Shri Krishna\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Party Karlo\",\"title\":\"Party Karlo\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/It'sAParty_saavn_radio_20201012132125_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Party-Karlo\",\"more_info\":{\"description\":\"Party on your mind? This is the ultimate party mix.\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#17a2ea\",\"language\":\"hindi\",\"station_display_text\":\"Party Karlo\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"90s Nostalgia\",\"title\":\"90s Nostalgia\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/90sNostalgia_saavn_radio_20201012131819_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/90s-Nostalgia\",\"more_info\":{\"description\":\"A Trip down memory lane with Cassette Classics!\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#ad7d1c\",\"language\":\"hindi\",\"station_display_text\":\"90s Nostalgia\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Mehfil-e-Ghazal\",\"title\":\"Mehfil-e-Ghazal\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/MehfilEGhazal_saavn_radio_20201012131922_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Mehfil-e-Ghazal\",\"more_info\":{\"description\":\"From Mehdi Hasan to Jagjit Singh, we've got your Naaz-o-Adaa right here!\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#e16a00\",\"language\":\"hindi\",\"station_display_text\":\"Mehfil-e-Ghazal\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Sufiyana Safar\",\"title\":\"Sufiyana Safar\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/SufiyanaSafar_saavn_radio_20201125121205_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Sufiyana-Safar\",\"more_info\":{\"description\":\"Feel the Spiritual Journey of Sufis, with Sufiyana Safar!\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#827453\",\"language\":\"hindi\",\"station_display_text\":\"Sufiyana Safar\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Hindi Superhits\",\"title\":\"Hindi Superhits\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/Superhits_saavn_radio_20210226152608_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Hindi-Superhits\",\"more_info\":{\"description\":\"\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#cc0c02\",\"language\":\"hindi\",\"station_display_text\":\"Hindi Superhits\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Bhakti Rachna\",\"title\":\"Bhakti Rachna\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/SantVaani_saavn_radio_20210528092948_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Bhakti-Rachna\",\"more_info\":{\"description\":\"\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#f25e5e\",\"language\":\"hindi\",\"station_display_text\":\"Bhakti Rachna\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Jai Shri Ram\",\"title\":\"Jai Shri Ram\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/JaiShriRam_saavn_radio_20210129122301_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Jai-Shri-Ram\",\"more_info\":{\"description\":\"\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#058a9e\",\"language\":\"hindi\",\"station_display_text\":\"Jai Shri Ram\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"Madhur Kirtan\",\"title\":\"Madhur Kirtan\",\"subtitle\":\"Hindi Radio\",\"type\":\"radio_station\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/MadhurKirtan_saavn_radio_20201215120716_150x150.jpg\",\"perma_url\":\"https:\\/\\/www.saavn.com\\/s\\/radio\\/hindi-featured-station\\/Madhur-Kirtan\",\"more_info\":{\"description\":\"\",\"featured_station_type\":\"featured\",\"query\":\"\",\"color\":\"#7a7600\",\"language\":\"hindi\",\"station_display_text\":\"Madhur Kirtan\"},\"explicit_content\":\"0\",\"mini_obj\":true}]"

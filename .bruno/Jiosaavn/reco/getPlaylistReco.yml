@@ -1,0 +1,98 @@
+info:
+  name: getPlaylistReco
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}?__call=reco.getPlaylistReco&api_version=4&_format=json&_marker=0&ctx=web6dot0&listid=1134595537"
+  params:
+    - name: __call
+      value: reco.getPlaylistReco
+      type: query
+    - name: api_version
+      value: "4"
+      type: query
+    - name: _format
+      value: json
+      type: query
+    - name: _marker
+      value: "0"
+      type: query
+    - name: ctx
+      value: web6dot0
+      type: query
+    - name: listid
+      value: "1134595537"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: "200"
+    request:
+      url: "{{base_url}}?__call=reco.getPlaylistReco&api_version=4&_format=json&_marker=0&ctx=web6dot0&listid=1134595537"
+      method: GET
+      params:
+        - name: __call
+          value: reco.getPlaylistReco
+          type: query
+        - name: api_version
+          value: "4"
+          type: query
+        - name: _format
+          value: json
+          type: query
+        - name: _marker
+          value: "0"
+          type: query
+        - name: ctx
+          value: web6dot0
+          type: query
+        - name: listid
+          value: "1134595537"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: text/html; charset=UTF-8
+        - name: content-length
+          value: "1617"
+        - name: referrer-policy
+          value: strict-origin-when-cross-origin
+        - name: vary
+          value: User-Agent,Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: permissions-policy
+          value: accelerometer=(self), camera=(self), display-capture=(self), fullscreen=(self), gyroscope=(self), magnetometer=(self), picture-in-picture=(self), screen-wake-lock=(self), xr-spatial-tracking=(self)
+        - name: content-security-policy
+          value: object-src 'none'; connect-src 'self' https://identitytoolkit.googleapis.com https://securepubads.g.doubleclick.net https://www.google-analytics.com https://hbopenbid.pubmatic.com https://pagead2.googlesyndication.com *.pubmatic.com; font-src 'self' https://fonts.gstatic.com data:; frame-src 'self' *.safeframe.googlesyndication.com https://ads.pubmatic.com https://www.google.com; worker-src 'none';manifest-src 'self';
+        - name: x-be-latency
+          value: 225-125
+        - name: x-frame-options
+          value: DENY
+        - name: expires
+          value: Thu, 28 May 2026 13:26:42 GMT
+        - name: cache-control
+          value: max-age=0, no-cache, no-store
+        - name: pragma
+          value: no-cache
+        - name: date
+          value: Thu, 28 May 2026 13:26:42 GMT
+        - name: connection
+          value: keep-alive
+        - name: alt-svc
+          value: h3=":443"; ma=93600
+        - name: strict-transport-security
+          value: max-age=63072000 ; includeSubDomains
+      body:
+        type: html
+        data: '[{"id":"1134548194","title":"India Superhits Top 50","subtitle":"Arijit Singh, Armaan Khan, Irshad Kamil, and more","type":"playlist","image":"https:\/\/c.saavncdn.com\/editorial\/IndiaSuperhitsTop50_20260507185853.jpg","perma_url":"https:\/\/www.jiosaavn.com\/featured\/india-superhits-top-50\/VuJUPQ9ch77bB,U5Yp5iAA__","more_info":{"firstname":"JioSaavn"},"explicit_content":"0","mini_obj":true},{"id":"945968461","title":"Top JioTunes 2021 - English","subtitle":"Tesher, Justin Bieber, and Maroon 5","type":"playlist","image":"https:\/\/c.saavncdn.com\/editorial\/logo\/TopJioTunes2021English_20211205032929.jpg","perma_url":"https:\/\/www.jiosaavn.com\/featured\/top-jiotunes-2021-english\/XMB78hwR7SUGSw2I1RxdhQ__","more_info":{"firstname":"JioSaavn"},"explicit_content":"0","mini_obj":true},{"id":"898795892","title":" Of The People - Top Charts - English","subtitle":"Alan Walker, Farruko, Sabrina Carpenter, and more","type":"playlist","image":"https:\/\/c.saavncdn.com\/editorial\/logo\/OfThePeopleTopChartsEnglish_20210120070239.jpg","perma_url":"https:\/\/www.jiosaavn.com\/featured\/-of-the-people-top-charts-english\/TcGmuyRC3OTc1EngHtQQ2g__","more_info":{"firstname":"JioSaavn"},"explicit_content":"0","mini_obj":true},{"id":"48189087","title":"English Viral Hits","subtitle":"Just Updated","type":"playlist","image":"https:\/\/c.saavncdn.com\/editorial\/EnglishViralHits_20260508135724.jpg","perma_url":"https:\/\/www.jiosaavn.com\/featured\/english-viral-hits\/pm49jiq,CNs_","more_info":{"firstname":"JioSaavn"},"explicit_content":"0","mini_obj":true},{"id":"775051063","title":"Clubbing at Park Street","subtitle":"Rema, Selena Gomez, Sia, and more","type":"playlist","image":"https:\/\/c.saavncdn.com\/editorial\/logo\/ClubbingatParkStreet_20200330062936.jpg","perma_url":"https:\/\/www.jiosaavn.com\/featured\/clubbing-at-park-street\/O1wRXhkyd90wkg5tVhI3fw__","more_info":{"firstname":"JioSaavn"},"explicit_content":"0","mini_obj":true},{"id":"73399784","title":"Ultimate Workout  Mix","subtitle":"Imagine Dragons, BTS, and Charli XCX","type":"playlist","image":"https:\/\/c.saavncdn.com\/editorial\/UltimateWorkoutMix_20260406111705.jpg","perma_url":"https:\/\/www.jiosaavn.com\/featured\/ultimate-workout-mix\/T0Uq4vn2byc_","more_info":{"firstname":"JioSaavn"},"explicit_content":"0","mini_obj":true},{"id":"1220823608","title":"All Time Hits - English","subtitle":"Bruno Mars, Lady Gaga, Sabrina Carpenter, and more","type":"playlist","image":"https:\/\/c.saavncdn.com\/editorial\/AllTimeHitsEnglish_20250717092009.jpg","perma_url":"https:\/\/www.jiosaavn.com\/featured\/all-time-hits-english\/yKce45DCuWHXlt6d74jf-w__","more_info":{"firstname":"JioSaavn"},"explicit_content":"0","mini_obj":true},{"id":"85159322","title":"Best of EDM - English","subtitle":"Just Updated","type":"playlist","image":"https:\/\/c.saavncdn.com\/editorial\/BestofEDMEnglish_20251209105122.jpg","perma_url":"https:\/\/www.jiosaavn.com\/featured\/best-of-edm-english\/u4jg0E7Pjt4_","more_info":{"firstname":"JioSaavn"},"explicit_content":"0","mini_obj":true},{"id":"945969391","title":"Most Searched Songs - International","subtitle":"Ed Sheeran, Boney M., Jennie, and more","type":"playlist","image":"https:\/\/c.saavncdn.com\/editorial\/MostSearchedSongsInternational_20260511055909.jpg","perma_url":"https:\/\/www.jiosaavn.com\/featured\/most-searched-songs-international\/xUOBWZUG6AgGSw2I1RxdhQ__","more_info":{"firstname":"JioSaavn"},"explicit_content":"0","mini_obj":true},{"id":"772653250","title":"Best Of 2010s - English","subtitle":"Sia, Ed Sheeran, and The Weeknd","type":"playlist","image":"https:\/\/c.saavncdn.com\/editorial\/BestOf2010sEnglish_20251209105219.jpg","perma_url":"https:\/\/www.jiosaavn.com\/featured\/best-of-2010s-english\/NU7Htu23ulBuOxiEGmm6lQ__","more_info":{"firstname":"JioSaavn"},"explicit_content":"0","mini_obj":true},{"id":"1081991857","title":"English Hit Songs","subtitle":"Taylor Swift, Bruno Mars, Lady Gaga, and more","type":"playlist","image":"https:\/\/c.saavncdn.com\/editorial\/EnglishHitSongs_20260501062702.jpg","perma_url":"https:\/\/www.jiosaavn.com\/featured\/english-hit-songs\/nrvUV5Tqghv9wIHXZ0JrGQ__","more_info":{"firstname":"JioSaavn"},"explicit_content":"0","mini_obj":true},{"id":"207897774","title":"Best of Romance - English Love Songs","subtitle":"Taylor Swift, Ed Sheeran, and Pink Sweat$","type":"playlist","image":"https:\/\/c.saavncdn.com\/editorial\/BestofRomanceEnglishLoveSongs_20260414051315.jpg","perma_url":"https:\/\/www.jiosaavn.com\/featured\/best-of-romance-english-love-songs\/ADWcBikKwKTufxkxMEIbIw__","more_info":{"firstname":"JioSaavn"},"explicit_content":"0","mini_obj":true},{"id":"87510850","title":"Most Streamed Love Songs - English","subtitle":"Ellie Goulding and Ed Sheeran","type":"playlist","image":"https:\/\/c.saavncdn.com\/editorial\/MostStreamedLoveSongsEnglish_20260209113210.jpg","perma_url":"https:\/\/www.jiosaavn.com\/featured\/most-streamed-love-songs-english\/wHN0Jq26XqA_","more_info":{"firstname":"JioSaavn"},"explicit_content":"0","mini_obj":true},{"id":"1297623283","title":"A Little Hide, A Little Seek","subtitle":"Bianca Gomes, Clinton Cerejo, Ed Sheeran, and more","type":"playlist","image":"https:\/\/c.saavncdn.com\/editorial\/ALittleHide-ALittleSeek_20260204065215.jpg","perma_url":"https:\/\/www.jiosaavn.com\/featured\/a-little-hide-a-little-seek\/mhBbKD956zMC0-RsHAbZ7g__","more_info":{"firstname":"JioSaavn"},"explicit_content":"0","mini_obj":true},{"id":"1139074020","title":"Most Streamed Love Songs: Hindi","subtitle":"Arijit Singh, Armaan Khan, Irshad Kamil, and more","type":"playlist","image":"https:\/\/c.saavncdn.com\/editorial\/MostStreamedLoveSongs-Hindi_20260302042416.jpg","perma_url":"https:\/\/www.jiosaavn.com\/featured\/most-streamed-love-songs-hindi\/RQKZhDpGh8uAIonqf0gmcg__","more_info":{"firstname":"JioSaavn"},"explicit_content":"0","mini_obj":true},{"id":"303128179","title":"Best of Pop - English","subtitle":"Sabrina Carpenter, The Weeknd, and Ed Sheeran","type":"playlist","image":"https:\/\/c.saavncdn.com\/editorial\/BestofPopEnglish_20260429115624.jpg","perma_url":"https:\/\/www.jiosaavn.com\/featured\/best-of-pop-english\/oqKee-6aXESO0eMLZZxqsA__","more_info":{"firstname":"JioSaavn"},"explicit_content":"0","mini_obj":true}]'

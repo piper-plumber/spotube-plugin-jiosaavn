@@ -1,0 +1,92 @@
+info:
+  name: getTopArtists
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{base_url}}?__call=social.getTopArtists&api_version=4&_format=json&_marker=0&ctx=web6dot0"
+  params:
+    - name: __call
+      value: social.getTopArtists
+      type: query
+    - name: api_version
+      value: "4"
+      type: query
+    - name: _format
+      value: json
+      type: query
+    - name: _marker
+      value: "0"
+      type: query
+    - name: ctx
+      value: web6dot0
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: "200"
+    request:
+      url: "{{base_url}}?__call=social.getTopArtists&api_version=4&_format=json&_marker=0&ctx=web6dot0"
+      method: GET
+      params:
+        - name: __call
+          value: social.getTopArtists
+          type: query
+        - name: api_version
+          value: "4"
+          type: query
+        - name: _format
+          value: json
+          type: query
+        - name: _marker
+          value: "0"
+          type: query
+        - name: ctx
+          value: web6dot0
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: text/html; charset=UTF-8
+        - name: content-length
+          value: "1911"
+        - name: referrer-policy
+          value: strict-origin-when-cross-origin
+        - name: vary
+          value: User-Agent,Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: permissions-policy
+          value: accelerometer=(self), camera=(self), display-capture=(self), fullscreen=(self), gyroscope=(self), magnetometer=(self), picture-in-picture=(self), screen-wake-lock=(self), xr-spatial-tracking=(self)
+        - name: content-security-policy
+          value: object-src 'none'; connect-src 'self' https://identitytoolkit.googleapis.com https://securepubads.g.doubleclick.net https://www.google-analytics.com https://hbopenbid.pubmatic.com https://pagead2.googlesyndication.com *.pubmatic.com; font-src 'self' https://fonts.gstatic.com data:; frame-src 'self' *.safeframe.googlesyndication.com https://ads.pubmatic.com https://www.google.com; worker-src 'none';manifest-src 'self';
+        - name: x-be-latency
+          value: 138-95
+        - name: x-frame-options
+          value: DENY
+        - name: expires
+          value: Thu, 28 May 2026 13:25:36 GMT
+        - name: cache-control
+          value: max-age=0, no-cache, no-store
+        - name: pragma
+          value: no-cache
+        - name: date
+          value: Thu, 28 May 2026 13:25:36 GMT
+        - name: connection
+          value: keep-alive
+        - name: alt-svc
+          value: h3=":443"; ma=93600
+        - name: strict-transport-security
+          value: max-age=63072000 ; includeSubDomains
+      body:
+        type: html
+        data: '{"top_artists":[{"artistid":"459320","name":"Arijit Singh","image":"https:\/\/c.saavncdn.com\/artists\/Arijit_Singh_004_20241118063717_150x150.jpg","follower_count":101769303,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/arijit-singh-songs\/LlRWpHzy3Hk_"},{"artistid":"464932","name":"Neha Kakkar","image":"https:\/\/c.saavncdn.com\/artists\/Neha_Kakkar_007_20241212115832_150x150.jpg","follower_count":22397962,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/neha-kakkar-songs\/EkEBV7JAU-I_"},{"artistid":"568565","name":"Justin Bieber","image":"https:\/\/c.saavncdn.com\/artists\/Justin_Bieber_005_20201127112218_150x150.jpg","follower_count":9286561,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/justin-bieber-songs\/deJJWFd1ItE_"},{"artistid":"468245","name":"Diljit Dosanjh","image":"https:\/\/c.saavncdn.com\/artists\/Diljit_Dosanjh_005_20231025073054_150x150.jpg","follower_count":8361519,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/diljit-dosanjh-songs\/oIVHdWIO5F8_"},{"artistid":"485956","name":"Yo Yo Honey Singh","image":"https:\/\/c.saavncdn.com\/artists\/Yo_Yo_Honey_Singh_002_20221216102650_150x150.jpg","follower_count":11290849,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/yo-yo-honey-singh-songs\/06QxyAvVpB4_"},{"artistid":"456863","name":"Badshah","image":"https:\/\/c.saavncdn.com\/artists\/Badshah_006_20241118064015_150x150.jpg","follower_count":14009535,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/badshah-songs\/d4OwAaEcnD0_"},{"artistid":"510237","name":"Nucleya","image":"https:\/\/c.saavncdn.com\/artists\/Nucleya_003_20260120062856_150x150.jpg","follower_count":444753,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/nucleya-songs\/nZkjTeNYKxY_"},{"artistid":"455125","name":"Sonu Nigam","image":"https:\/\/c.saavncdn.com\/artists\/Sonu_Nigam_150x150.jpg","follower_count":22597785,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/sonu-nigam-songs\/,kuQK6K6u0I_"},{"artistid":"455109","name":"Lata Mangeshkar","image":"https:\/\/c.saavncdn.com\/artists\/Lata_Mangeshkar_004_20230623105323_150x150.jpg","follower_count":19535144,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/lata-mangeshkar-songs\/FCtl69DObYg_"},{"artistid":"578407","name":"Ed Sheeran","image":"https:\/\/c.saavncdn.com\/artists\/Ed_Sheeran_002_20250625073038_150x150.jpg","follower_count":6388499,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/ed-sheeran-songs\/bWIDsVrU6DE_"},{"artistid":"455130","name":"Shreya Ghoshal","image":"https:\/\/c.saavncdn.com\/artists\/Shreya_Ghoshal_007_20241101074144_150x150.jpg","follower_count":41602476,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/shreya-ghoshal-songs\/lIHlwHaxTZ0_"},{"artistid":"674886","name":"Sanam Puri","image":"https:\/\/c.saavncdn.com\/artists\/Sanam_Puri_150x150.jpg","follower_count":6344919,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/sanam-puri-songs\/SkNEv3qRhDE_"},{"artistid":"458918","name":"Raftaar","image":"https:\/\/c.saavncdn.com\/artists\/Raftaar_009_20230223100912_150x150.jpg","follower_count":4002011,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/raftaar-songs\/ZYd,kDiZhJg_"},{"artistid":"455132","name":"Himesh Reshammiya","image":"https:\/\/c.saavncdn.com\/artists\/Himesh_Reshammiya_150x150.jpg","follower_count":16128026,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/himesh-reshammiya-songs\/N,m6H0-rqiY_"},{"artistid":"464656","name":"Armaan Malik","image":"https:\/\/c.saavncdn.com\/artists\/Armaan_Malik_005_20240819091627_150x150.jpg","follower_count":14370961,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/armaan-malik-songs\/1iZ7Gi0bi1Y_"},{"artistid":"461361","name":"Shah Rukh Khan","image":"https:\/\/c.saavncdn.com\/artists\/Shah_Rukh_Khan_150x150.jpg","follower_count":907587,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/shah-rukh-khan-songs\/tkXMVGTn-A0_"},{"artistid":"457931","name":"Deepika Padukone","image":"https:\/\/c.saavncdn.com\/artists\/Deepika_Padukone_002_20220131100114_150x150.jpg","follower_count":603990,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/deepika-padukone-songs\/36LfdYhYGvc_"},{"artistid":"459696","name":"Salman Khan","image":"https:\/\/c.saavncdn.com\/artists\/Salman_Khan_002_20200519100153_150x150.jpg","follower_count":920843,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/salman-khan-songs\/uuAKJcbNOKg_"},{"artistid":"511656","name":"Varun Dhawan","image":"https:\/\/c.saavncdn.com\/artists\/Varun_Dhawan_150x150.jpg","follower_count":597233,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/varun-dhawan-songs\/nPLp3EdUdaA_"},{"artistid":"511658","name":"Alia Bhatt","image":"https:\/\/c.saavncdn.com\/artists\/Alia_Bhatt_150x150.jpg","follower_count":671627,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/alia-bhatt-songs\/,henzzVDXDQ_"},{"artistid":"459632","name":"Ranbir Kapoor","image":"https:\/\/c.saavncdn.com\/artists\/Ranbir_Kapoor_150x150.jpg","follower_count":642556,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/ranbir-kapoor-songs\/nqAfNmNB5II_"},{"artistid":"462795","name":"Anushka Sharma","image":"https:\/\/c.saavncdn.com\/artists\/Anushka_Sharma_150x150.jpg","follower_count":499193,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/anushka-sharma-songs\/kAK8j9P3jU8_"},{"artistid":"455778","name":"Shahid Kapoor","image":"https:\/\/c.saavncdn.com\/artists\/Shahid_Kapoor_003_20230608090033_150x150.jpg","follower_count":552503,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/shahid-kapoor-songs\/Ai6NXV-,6xI_"},{"artistid":"531934","name":"Sunny Leone","image":"https:\/\/c.saavncdn.com\/artists\/Sunny_Leone_150x150.jpg","follower_count":458974,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/sunny-leone-songs\/TDf7I3RaiT0_"},{"artistid":"458135","name":"Allu Arjun","image":"https:\/\/c.saavncdn.com\/artists\/Allu_Arjun_150x150.jpg","follower_count":786167,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/allu-arjun-songs\/BGi8EcKdZXk_"},{"artistid":"457969","name":"Rajinikanth","image":"https:\/\/c.saavncdn.com\/artists\/Rajinikanth_150x150.jpg","follower_count":1689054,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/rajinikanth-songs\/E-hZmoCP5VU_"},{"artistid":"456117","name":"Amitabh Bachchan","image":"https:\/\/c.saavncdn.com\/artists\/Amitabh_Bachchan_150x150.jpg","follower_count":434848,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/amitabh-bachchan-songs\/X6Dce0iJ7y0_"},{"artistid":"455785","name":"Priyanka Chopra","image":"https:\/\/c.saavncdn.com\/artists\/Priyanka_Chopra_150x150.jpg","follower_count":481450,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/priyanka-chopra-songs\/ZOsjqZwNagU_"},{"artistid":"459631","name":"Katrina Kaif","image":"https:\/\/c.saavncdn.com\/artists\/Katrina_Kaif_150x150.jpg","follower_count":561530,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/katrina-kaif-songs\/GzitOgpaAM0_"},{"artistid":"456196","name":"Vijay","image":"https:\/\/c.saavncdn.com\/artists\/Vijay_003_20240103075444_150x150.jpg","follower_count":2837044,"is_followed":false,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/vijay-songs\/Poyjz0rbAbA_"}],"following_artists":[{"artistid":"462925","name":"Sarvanand Thakur","image":"https:\/\/c.saavncdn.com\/356\/Bhojpuri-Nirgun-Bhajan-Part-4-1997-150x150.jpg","follower_count":153,"is_followed":true,"is_mutual":true,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/sarvanand-thakur-songs\/"},{"artistid":"25674106","name":"Sarvan\u200b Yadav","image":"https:\/\/static.saavncdn.com\/_i\/share-image-2.png","follower_count":0,"is_followed":true,"is_mutual":true,"perma_url":"https:\/\/www.jiosaavn.com\/artist\/sarvan%e2%80%8b-yadav-songs\/"}],"status":"success"}'

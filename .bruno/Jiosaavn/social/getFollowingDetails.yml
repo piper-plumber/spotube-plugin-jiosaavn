@@ -1,0 +1,37 @@
+info:
+  name: getFollowingDetails
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}?__call=social.getFollowingDetails&api_version=4&_format=json&_marker=0&ctx=web6dot0"
+  params:
+    - name: __call
+      value: social.getFollowingDetails
+      type: query
+    - name: api_version
+      value: "4"
+      type: query
+    - name: _format
+      value: json
+      type: query
+    - name: _marker
+      value: "0"
+      type: query
+    - name: ctx
+      value: web6dot0
+      type: query
+    - name: entity_type
+      value: artist
+      type: query
+    - name: userid
+      value: fd4fecfca25e8f2ec4bd8dd4e0aa7293
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

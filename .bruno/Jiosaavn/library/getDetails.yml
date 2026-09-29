@@ -1,0 +1,337 @@
+info:
+  name: getDetails
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}?__call=library.getDetails&api_version=4&_format=json&_marker=0&ctx=web6dot0&entity_ids=91YiDzik&entity_type=song&n=50"
+  headers:
+    - name: Cookie
+      value: "{{auth_cookie}}"
+  params:
+    - name: __call
+      value: library.getDetails
+      type: query
+    - name: api_version
+      value: "4"
+      type: query
+    - name: _format
+      value: json
+      type: query
+    - name: _marker
+      value: "0"
+      type: query
+    - name: ctx
+      value: web6dot0
+      type: query
+    - name: entity_ids
+      value: 91YiDzik
+      type: query
+    - name: entity_type
+      value: song
+      type: query
+    - name: n
+      value: "50"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: songs
+    request:
+      url: "{{base_url}}?__call=library.getDetails&api_version=4&_format=json&_marker=0&ctx=web6dot0&entity_ids=91YiDzik,kgWbcyp8,MBysuaOs,HMewPu1j,MuaEIlJs&entity_type=song&n=50"
+      method: GET
+      headers:
+        - name: Cookie
+          value: "{{auth_cookie}}"
+      params:
+        - name: __call
+          value: library.getDetails
+          type: query
+        - name: api_version
+          value: "4"
+          type: query
+        - name: _format
+          value: json
+          type: query
+        - name: _marker
+          value: "0"
+          type: query
+        - name: ctx
+          value: web6dot0
+          type: query
+        - name: entity_ids
+          value: 91YiDzik,kgWbcyp8,MBysuaOs,HMewPu1j,MuaEIlJs
+          type: query
+        - name: entity_type
+          value: song
+          type: query
+        - name: n
+          value: "50"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: text/html; charset=UTF-8
+        - name: content-length
+          value: "3032"
+        - name: referrer-policy
+          value: strict-origin-when-cross-origin
+        - name: vary
+          value: User-Agent,Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: permissions-policy
+          value: accelerometer=(self), camera=(self), display-capture=(self), fullscreen=(self), gyroscope=(self), magnetometer=(self), picture-in-picture=(self), screen-wake-lock=(self), xr-spatial-tracking=(self)
+        - name: content-security-policy
+          value: object-src 'none'; connect-src 'self' https://identitytoolkit.googleapis.com https://securepubads.g.doubleclick.net https://www.google-analytics.com https://hbopenbid.pubmatic.com https://pagead2.googlesyndication.com *.pubmatic.com; font-src 'self' https://fonts.gstatic.com data:; frame-src 'self' *.safeframe.googlesyndication.com https://ads.pubmatic.com https://www.google.com; worker-src 'none';manifest-src 'self';
+        - name: x-js-user
+          value: SlNMSSQkZmQ0ZmVjZmNhMjVlOGYyZWM0YmQ4ZGQ0ZTBhYTcyOTMkJDE3ODAwNjY5NjU=
+        - name: x-be-latency
+          value: 211-33
+        - name: x-frame-options
+          value: DENY
+        - name: expires
+          value: Fri, 29 May 2026 15:02:45 GMT
+        - name: cache-control
+          value: max-age=0, no-cache, no-store
+        - name: pragma
+          value: no-cache
+        - name: date
+          value: Fri, 29 May 2026 15:02:45 GMT
+        - name: connection
+          value: keep-alive
+        - name: alt-svc
+          value: h3=":443"; ma=93600
+        - name: strict-transport-security
+          value: max-age=63072000 ; includeSubDomains
+      body:
+        type: html
+        data: '{"songs":[{"id":"91YiDzik","title":"City Walls","subtitle":"Twenty One Pilots - Breach","header_desc":"","type":"song","perma_url":"https:\/\/www.jiosaavn.com\/song\/city-walls\/SVkyWDBKXlg","image":"https:\/\/c.saavncdn.com\/908\/Breach-English-2025-20250911224326-150x150.jpg","language":"english","year":"2025","play_count":"3264","explicit_content":"0","list_count":"0","list_type":"","list":"","more_info":{"music":"","album_id":"67973210","album":"Breach","label":"Fueled By Ramen","label_id":"37144","origin":"none","is_dolby_content":false,"320kbps":"true","encrypted_media_url":"ID2ieOjCrwfgWvL5sXl4B1ImC5QfbsDyK82t8iP9eQFNWamFNbmDT29k7nNCLt6Wx5AdluXvZkCBANp42uqhyBw7tS9a8Gtq","encrypted_cache_url":"","encrypted_drm_cache_url":"","encrypted_drm_media_url":"ID2ieOjCrwdjlkMElYlzWCptgNdUpWD8tXNz0B8mEWkv\/Za+U7Kf9Lu09Jc68ens9GTBnLzm3c0M\/3MRVriEOo92mytrdt3FDnQW0nglPS4=","album_url":"https:\/\/www.jiosaavn.com\/album\/breach\/r,dB3ArzKc8_","duration":"322","rights":{"code":"0","cacheable":"true","delete_cached_object":"false","reason":""},"cache_state":"false","has_lyrics":"false","lyrics_snippet":"","starred":"false","copyright_text":"\u2117 2025 Fueled By Ramen LLC","artistMap":{"primary_artists":[{"id":"720746","name":"Twenty One Pilots","role":"primary_artists","image":"https:\/\/c.saavncdn.com\/artists\/Twenty_One_Pilots_003_20250825082352_150x150.jpg","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/twenty-one-pilots-songs\/Dx5Vty3hXGs_"}],"featured_artists":[],"artists":[{"id":"1002377","name":"Tyler Joseph","role":"lyricist","image":"https:\/\/c.saavncdn.com\/314\/CC-Saga-English-2018-20191118061704-150x150.jpg","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/tyler-joseph-songs\/HvKDJYMZ2CI_"},{"id":"638507","name":"Paul Meany","role":"lyricist","image":"","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/paul-meany-songs\/vNuGbf3hWAY_"}]},"release_date":"2025-09-12","label_url":"\/label\/fueled-by-ramen-albums\/pWbY1WNcdL8_","triller_available":false,"request_jiotune_flag":false,"webp":"true"},"button_tooltip_info":[],"pro_hva_campaigns":[]},{"id":"kgWbcyp8","title":"Robot Voices","subtitle":"Twenty One Pilots - Breach","header_desc":"","type":"song","perma_url":"https:\/\/www.jiosaavn.com\/song\/robot-voices\/Gw88UxdJRws","image":"https:\/\/c.saavncdn.com\/908\/Breach-English-2025-20250911224326-150x150.jpg","language":"english","year":"2025","play_count":"526","explicit_content":"0","list_count":"0","list_type":"","list":"","more_info":{"music":"","album_id":"67973210","album":"Breach","label":"Fueled By Ramen","label_id":"37144","origin":"none","is_dolby_content":false,"320kbps":"true","encrypted_media_url":"ID2ieOjCrwfgWvL5sXl4B1ImC5QfbsDy8nmWBJJ6BXyP9UcVyWltWhOpwC1Vicm\/KoX+ly1LzeSYFa8tPS\/pxBw7tS9a8Gtq","encrypted_cache_url":"","encrypted_drm_cache_url":"","encrypted_drm_media_url":"ID2ieOjCrwdjlkMElYlzWCptgNdUpWD8tXNz0B8mEWkci3vcv\/GfT\/fvomKmyIF\/ip+ogQBa+aafMLGe6DjiEI92mytrdt3FDnQW0nglPS4=","album_url":"https:\/\/www.jiosaavn.com\/album\/breach\/r,dB3ArzKc8_","duration":"237","rights":{"code":"0","cacheable":"true","delete_cached_object":"false","reason":""},"cache_state":"false","has_lyrics":"false","lyrics_snippet":"","starred":"false","copyright_text":"\u2117 2025 Fueled By Ramen LLC","artistMap":{"primary_artists":[{"id":"720746","name":"Twenty One Pilots","role":"primary_artists","image":"https:\/\/c.saavncdn.com\/artists\/Twenty_One_Pilots_003_20250825082352_150x150.jpg","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/twenty-one-pilots-songs\/Dx5Vty3hXGs_"}],"featured_artists":[],"artists":[{"id":"1002377","name":"Tyler Joseph","role":"lyricist","image":"https:\/\/c.saavncdn.com\/314\/CC-Saga-English-2018-20191118061704-150x150.jpg","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/tyler-joseph-songs\/HvKDJYMZ2CI_"},{"id":"23400941","name":"Joey Hayden","role":"lyricist","image":"","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/joey-hayden-songs\/Y4gTOETSN7Y_"},{"id":"23400942","name":"Jackson Matteucci","role":"lyricist","image":"","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/jackson-matteucci-songs\/wgMmdohAfu4_"},{"id":"23400943","name":"Maximilian Mena","role":"lyricist","image":"","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/maximilian-mena-songs\/gnc,soIbD4k_"},{"id":"5877034","name":"Rahul Chakraborty","role":"lyricist","image":"","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/rahul-chakraborty-songs\/QHy272uL-4w_"},{"id":"3146675","name":"Shane Hagan","role":"lyricist","image":"","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/shane-hagan-songs\/OHl01D7USzA_"},{"id":"3602684","name":"Shane Becker","role":"lyricist","image":"","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/shane-becker-songs\/QBcwV9xHdUo_"}]},"release_date":"2025-09-12","label_url":"\/label\/fueled-by-ramen-albums\/pWbY1WNcdL8_","triller_available":false,"request_jiotune_flag":false,"webp":"true"},"button_tooltip_info":[],"pro_hva_campaigns":[]},{"id":"MBysuaOs","title":"One Way","subtitle":"Twenty One Pilots - Breach","header_desc":"","type":"song","perma_url":"https:\/\/www.jiosaavn.com\/song\/one-way\/PSoSQgFReEA","image":"https:\/\/c.saavncdn.com\/908\/Breach-English-2025-20250911224326-150x150.jpg","language":"english","year":"2025","play_count":"540","explicit_content":"0","list_count":"0","list_type":"","list":"","more_info":{"music":"","album_id":"67973210","album":"Breach","label":"Fueled By Ramen","label_id":"37144","origin":"none","is_dolby_content":false,"320kbps":"true","encrypted_media_url":"ID2ieOjCrwfgWvL5sXl4B1ImC5QfbsDyY0VN1SongKuRl2dhG9VMOSnJwu8Yp2EKjOoMweZTqynWEv9OWODZ\/Rw7tS9a8Gtq","encrypted_cache_url":"","encrypted_drm_cache_url":"","encrypted_drm_media_url":"ID2ieOjCrwdjlkMElYlzWCptgNdUpWD8tXNz0B8mEWnMBRvgZOsqAzjDbppcwQEOSXHlMnVGHIli89\/xziuhs492mytrdt3FDnQW0nglPS4=","album_url":"https:\/\/www.jiosaavn.com\/album\/breach\/r,dB3ArzKc8_","duration":"163","rights":{"code":"0","cacheable":"true","delete_cached_object":"false","reason":""},"cache_state":"false","has_lyrics":"false","lyrics_snippet":"","starred":"false","copyright_text":"\u2117 2025 Fueled By Ramen LLC","artistMap":{"primary_artists":[{"id":"720746","name":"Twenty One Pilots","role":"primary_artists","image":"https:\/\/c.saavncdn.com\/artists\/Twenty_One_Pilots_003_20250825082352_150x150.jpg","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/twenty-one-pilots-songs\/Dx5Vty3hXGs_"}],"featured_artists":[],"artists":[{"id":"1002377","name":"Tyler Joseph","role":"lyricist","image":"https:\/\/c.saavncdn.com\/314\/CC-Saga-English-2018-20191118061704-150x150.jpg","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/tyler-joseph-songs\/HvKDJYMZ2CI_"},{"id":"518457","name":"Chris Smith","role":"lyricist","image":"https:\/\/c.saavncdn.com\/818\/Do-the-Maths-English-2019-20190129213100-150x150.jpg","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/chris-smith-songs\/arZFqZKVmbI_"}]},"release_date":"2025-09-12","label_url":"\/label\/fueled-by-ramen-albums\/pWbY1WNcdL8_","triller_available":false,"request_jiotune_flag":false,"webp":"true"},"button_tooltip_info":[],"pro_hva_campaigns":[]},{"id":"HMewPu1j","title":"Tally","subtitle":"Twenty One Pilots ft. Akkineni Naga Chaitanya, Sai Pallavi - Breach","header_desc":"","type":"song","perma_url":"https:\/\/www.jiosaavn.com\/song\/tally\/OCUORiRFBlk","image":"https:\/\/c.saavncdn.com\/908\/Breach-English-2025-20250911224326-150x150.jpg","language":"english","year":"2025","play_count":"600","explicit_content":"0","list_count":"0","list_type":"","list":"","more_info":{"music":"","album_id":"67973210","album":"Breach","label":"Fueled By Ramen","label_id":"37144","origin":"none","is_dolby_content":false,"320kbps":"true","encrypted_media_url":"ID2ieOjCrwfgWvL5sXl4B1ImC5QfbsDyFX5cB28B9+DY9pUzGchpWMbfsEMwaNa+YNz4sJ7KsbZPEfwFm60Dixw7tS9a8Gtq","encrypted_cache_url":"","encrypted_drm_cache_url":"","encrypted_drm_media_url":"ID2ieOjCrwdjlkMElYlzWCptgNdUpWD8tXNz0B8mEWni+Edty6xE3CGSeagad8A9Fj0x1qi5IF07WNhb4JuOR492mytrdt3FDnQW0nglPS4=","album_url":"https:\/\/www.jiosaavn.com\/album\/breach\/r,dB3ArzKc8_","duration":"212","rights":{"code":"0","cacheable":"true","delete_cached_object":"false","reason":""},"cache_state":"false","has_lyrics":"false","lyrics_snippet":"","starred":"false","copyright_text":"\u2117 2025 Fueled By Ramen LLC","artistMap":{"primary_artists":[{"id":"720746","name":"Twenty One Pilots","role":"primary_artists","image":"https:\/\/c.saavncdn.com\/artists\/Twenty_One_Pilots_003_20250825082352_150x150.jpg","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/twenty-one-pilots-songs\/Dx5Vty3hXGs_"}],"featured_artists":[{"id":"455175","name":"Akkineni Naga Chaitanya","role":"featured_artists","image":"https:\/\/c.saavncdn.com\/artists\/Naga_Chaitanya_150x150.jpg","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/akkineni-naga-chaitanya-songs\/hgs0S1wwFPc_"},{"id":"846657","name":"Sai Pallavi","role":"featured_artists","image":"https:\/\/c.saavncdn.com\/artists\/Sai_Pallavi_20180509061550_150x150.jpg","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/sai-pallavi-songs\/0c43Cuwd180_"}],"artists":[{"id":"481043","name":"Akhil Sachdeva","role":"music","image":"https:\/\/c.saavncdn.com\/artists\/Akhil_Sachdeva_20191130065943_150x150.jpg","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/akhil-sachdeva-songs\/wTX9Hfv1bmM_"},{"id":"7515777","name":"Sarthak Nakul","role":"music","image":"https:\/\/c.saavncdn.com\/artists\/Sarthak_Nakul_001_20230913073426_150x150.jpg","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/sarthak-nakul-songs\/h37HxLYJui0_"},{"id":"2518190","name":"BLACKPINK","role":"singer","image":"https:\/\/c.saavncdn.com\/artists\/BlackPink_005_20260319191032_150x150.jpg","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/blackpink-songs\/-r0by6dtVic_"},{"id":"1002377","name":"Tyler Joseph","role":"lyricist","image":"https:\/\/c.saavncdn.com\/314\/CC-Saga-English-2018-20191118061704-150x150.jpg","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/tyler-joseph-songs\/HvKDJYMZ2CI_"},{"id":"1339839","name":"Drew Fulk","role":"lyricist","image":"","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/drew-fulk-songs\/D3b3kqbIzpY_"},{"id":"3253138","name":"Parth Samthaan","role":"starring","image":"","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/parth-samthaan-songs\/vWk-4oK1flM_"},{"id":"669009","name":"Niti Taylor","role":"starring","image":"","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/niti-taylor-songs\/y60,rnaAmsE_"}]},"release_date":"2025-09-12","label_url":"\/label\/fueled-by-ramen-albums\/pWbY1WNcdL8_","triller_available":false,"request_jiotune_flag":false,"webp":"true"},"button_tooltip_info":[],"pro_hva_campaigns":[]},{"id":"MuaEIlJs","title":"Sapphire","subtitle":"Ed Sheeran - Sapphire","header_desc":"","type":"song","perma_url":"https:\/\/www.jiosaavn.com\/song\/sapphire\/PR0KdD1cfUA","image":"https:\/\/c.saavncdn.com\/760\/Sapphire-English-2025-20250623223610-150x150.jpg","language":"english","year":"2025","play_count":"12601534","explicit_content":"0","list_count":"0","list_type":"","list":"","more_info":{"music":"","album_id":"65168983","album":"Sapphire","label":"Gingerbread Man Records \/ Atlantic Records UK","label_id":"7224945","origin":"none","is_dolby_content":false,"320kbps":"true","encrypted_media_url":"ID2ieOjCrwfgWvL5sXl4B1ImC5QfbsDyg8Y2XPicfpbT9Y3Ah\/bDSzmcX+2BSlmRL9YoFU0WQMyiVRvXUgcqORw7tS9a8Gtq","encrypted_cache_url":"","encrypted_drm_cache_url":"","encrypted_drm_media_url":"ID2ieOjCrwdjlkMElYlzWCptgNdUpWD89ecohUkTEG7dSpM4WL7o0ZbI97PgMMK5c\/6Ua3mo9Ov8P0CVGVLh7o92mytrdt3FDnQW0nglPS4=","album_url":"https:\/\/www.jiosaavn.com\/album\/sapphire\/CfeLQZzdfyk_","duration":"179","rights":{"code":"0","cacheable":"true","delete_cached_object":"false","reason":""},"cache_state":"false","has_lyrics":"false","lyrics_snippet":"","starred":"false","copyright_text":"Gingerbread Man Records and Atlantic Records UK release, under exclusive licence to Warner Music UK Limited, \u2117 2025 Ed Sheeran Limited","artistMap":{"primary_artists":[{"id":"578407","name":"Ed Sheeran","role":"primary_artists","image":"https:\/\/c.saavncdn.com\/artists\/Ed_Sheeran_002_20250625073038_150x150.jpg","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/ed-sheeran-songs\/bWIDsVrU6DE_"}],"featured_artists":[],"artists":[{"id":"578407","name":"Ed Sheeran","role":"singer","image":"https:\/\/c.saavncdn.com\/artists\/Ed_Sheeran_002_20250625073038_150x150.jpg","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/ed-sheeran-songs\/bWIDsVrU6DE_"},{"id":"459320","name":"Arijit Singh","role":"lyricist","image":"https:\/\/c.saavncdn.com\/artists\/Arijit_Singh_004_20241118063717_150x150.jpg","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/arijit-singh-songs\/LlRWpHzy3Hk_"},{"id":"4602432","name":"Avinash Chouhan","role":"lyricist","image":"","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/avinash-chouhan-songs\/9uVTqunZvJs_"},{"id":"578407","name":"Ed Sheeran","role":"lyricist","image":"https:\/\/c.saavncdn.com\/artists\/Ed_Sheeran_002_20250625073038_150x150.jpg","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/ed-sheeran-songs\/bWIDsVrU6DE_"},{"id":"598916","name":"Ilya Salmanzadeh","role":"lyricist","image":"","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/ilya-salmanzadeh-songs\/p8r-EavMx,k_"},{"id":"609189","name":"Johnny Mcdaid","role":"lyricist","image":"https:\/\/c.saavncdn.com\/523\/This-Is-How-You-Walk-On-From-Gifted--English-2017-20171207122101-150x150.jpg","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/johnny-mcdaid-songs\/LzKXilS0y3c_"},{"id":"464934","name":"Mayur Puri","role":"lyricist","image":"https:\/\/c.saavncdn.com\/artists\/Mayur_Puri_000_20250916115352_150x150.jpg","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/mayur-puri-songs\/oXrnIRxMZHw_"},{"id":"531606","name":"Savan Kotecha","role":"lyricist","image":"","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/savan-kotecha-songs\/ReYOxN49dUQ_"}]},"release_date":"2025-06-05","label_url":"\/label\/gingerbread-man-records-atlantic-records-uk-albums\/,RWZ8JDBouU_","vcode":"010912023184432","vlink":"https:\/\/jiotunepreview.jio.com\/content\/Converted\/010912023145834.mp3","triller_available":false,"request_jiotune_flag":false,"webp":"true"},"button_tooltip_info":[],"pro_hva_campaigns":[]}]}'
+  - name: album
+    request:
+      url: "{{base_url}}?__call=library.getDetails&api_version=4&_format=json&_marker=0&ctx=web6dot0&entity_ids=67973210&entity_type=album&n=50"
+      method: GET
+      headers:
+        - name: Cookie
+          value: "{{auth_cookie}}"
+      params:
+        - name: __call
+          value: library.getDetails
+          type: query
+        - name: api_version
+          value: "4"
+          type: query
+        - name: _format
+          value: json
+          type: query
+        - name: _marker
+          value: "0"
+          type: query
+        - name: ctx
+          value: web6dot0
+          type: query
+        - name: entity_ids
+          value: "67973210"
+          type: query
+        - name: entity_type
+          value: album
+          type: query
+        - name: n
+          value: "50"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: text/html; charset=UTF-8
+        - name: content-length
+          value: "457"
+        - name: referrer-policy
+          value: strict-origin-when-cross-origin
+        - name: vary
+          value: User-Agent,Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: permissions-policy
+          value: accelerometer=(self), camera=(self), display-capture=(self), fullscreen=(self), gyroscope=(self), magnetometer=(self), picture-in-picture=(self), screen-wake-lock=(self), xr-spatial-tracking=(self)
+        - name: content-security-policy
+          value: object-src 'none'; connect-src 'self' https://identitytoolkit.googleapis.com https://securepubads.g.doubleclick.net https://www.google-analytics.com https://hbopenbid.pubmatic.com https://pagead2.googlesyndication.com *.pubmatic.com; font-src 'self' https://fonts.gstatic.com data:; frame-src 'self' *.safeframe.googlesyndication.com https://ads.pubmatic.com https://www.google.com; worker-src 'none';manifest-src 'self';
+        - name: x-js-user
+          value: SlNMSSQkZmQ0ZmVjZmNhMjVlOGYyZWM0YmQ4ZGQ0ZTBhYTcyOTMkJDE3ODAwNjcwMTE=
+        - name: x-be-latency
+          value: 205-32
+        - name: x-frame-options
+          value: DENY
+        - name: expires
+          value: Fri, 29 May 2026 15:03:31 GMT
+        - name: cache-control
+          value: max-age=0, no-cache, no-store
+        - name: pragma
+          value: no-cache
+        - name: date
+          value: Fri, 29 May 2026 15:03:31 GMT
+        - name: connection
+          value: keep-alive
+        - name: alt-svc
+          value: h3=":443"; ma=93600
+        - name: strict-transport-security
+          value: max-age=63072000 ; includeSubDomains
+      body:
+        type: html
+        data: '[{"id":"67973210","title":"Breach","subtitle":"","type":"album","image":"https:\/\/c.saavncdn.com\/908\/Breach-English-2025-20250911224326-150x150.jpg","perma_url":"https:\/\/www.jiosaavn.com\/album\/breach\/r,dB3ArzKc8_","more_info":{"artistMap":{"primary_artists":[{"id":"720746","name":"Twenty One Pilots","role":"","image":"https:\/\/c.saavncdn.com\/artists\/Twenty_One_Pilots_003_20250825082352_150x150.jpg","type":"artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/twenty-one-pilots-songs\/Dx5Vty3hXGs_"}]},"contents":"91YiDzik,Dl4_dLDq,-gZoy32_,54V1uS7b,vIn6Ufpg,MRFJen2o,kgWbcyp8,P8pT6bfj,mwDgnkwd,MBysuaOs,7w40rUAG,HMewPu1j,HPTTXGMv","year":"2025"},"explicit_content":"0","mini_obj":true}]'
+  - name: playlists
+    request:
+      url: "{{base_url}}?__call=library.getDetails&api_version=4&_format=json&_marker=0&ctx=web6dot0&entity_ids=1300915270&entity_type=playlist&n=50"
+      method: GET
+      headers:
+        - name: Cookie
+          value: "{{auth_cookie}}"
+      params:
+        - name: __call
+          value: library.getDetails
+          type: query
+        - name: api_version
+          value: "4"
+          type: query
+        - name: _format
+          value: json
+          type: query
+        - name: _marker
+          value: "0"
+          type: query
+        - name: ctx
+          value: web6dot0
+          type: query
+        - name: entity_ids
+          value: "1300915270"
+          type: query
+        - name: entity_type
+          value: playlist
+          type: query
+        - name: n
+          value: "50"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: text/html; charset=UTF-8
+        - name: content-length
+          value: "512"
+        - name: referrer-policy
+          value: strict-origin-when-cross-origin
+        - name: vary
+          value: User-Agent,Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: permissions-policy
+          value: accelerometer=(self), camera=(self), display-capture=(self), fullscreen=(self), gyroscope=(self), magnetometer=(self), picture-in-picture=(self), screen-wake-lock=(self), xr-spatial-tracking=(self)
+        - name: content-security-policy
+          value: object-src 'none'; connect-src 'self' https://identitytoolkit.googleapis.com https://securepubads.g.doubleclick.net https://www.google-analytics.com https://hbopenbid.pubmatic.com https://pagead2.googlesyndication.com *.pubmatic.com; font-src 'self' https://fonts.gstatic.com data:; frame-src 'self' *.safeframe.googlesyndication.com https://ads.pubmatic.com https://www.google.com; worker-src 'none';manifest-src 'self';
+        - name: x-js-user
+          value: SlNMSSQkZmQ0ZmVjZmNhMjVlOGYyZWM0YmQ4ZGQ0ZTBhYTcyOTMkJDE3ODAwNjcwNDI=
+        - name: x-be-latency
+          value: 143-9
+        - name: x-frame-options
+          value: DENY
+        - name: expires
+          value: Fri, 29 May 2026 15:04:02 GMT
+        - name: cache-control
+          value: max-age=0, no-cache, no-store
+        - name: pragma
+          value: no-cache
+        - name: date
+          value: Fri, 29 May 2026 15:04:02 GMT
+        - name: connection
+          value: keep-alive
+        - name: alt-svc
+          value: h3=":443"; ma=93600
+        - name: strict-transport-security
+          value: max-age=63072000 ; includeSubDomains
+      body:
+        type: html
+        data: '[{"id":"1300915270","title":"My another Playlist","subtitle":"3 Songs","header_desc":"","type":"playlist","perma_url":"https:\/\/www.jiosaavn.com\/s\/playlist\/fd4fecfca25e8f2ec4bd8dd4e0aa7293\/my-another-playlist\/xqlxTUZRy7hwtkLw7-JlUw__","image":"https:\/\/pli.saavncdn.com\/52\/70\/1300915270.jpg?bch=1780040665","language":"","year":"","play_count":"","explicit_content":"0","list_count":"0","list_type":"","list":[],"more_info":{"listid":"1300915270","username":"","uid":"fd4fecfca25e8f2ec4bd8dd4e0aa7293","listname":"My another Playlist","contents":"sqePSxZv,13akR5wJ","creation_date":"2026-05-29 00:06:48","share":"1","last_updated":1780038865,"favourite":"0","owner":"","owner_listid":"","normalized_listname":"","follower_count":"0","extra_info":"[]","song_count":"2","firstname":"","lastname":"","is_followed":"false","isFY":false,"video_count":"0"},"button_tooltip_info":[],"pro_hva_campaigns":[]}]'
+  - name: artists
+    request:
+      url: "{{base_url}}?__call=library.getDetails&api_version=4&_format=json&_marker=0&ctx=web6dot0&entity_ids=720746,755042,578407,598321,568565,485944&entity_type=artist&n=50"
+      method: GET
+      headers:
+        - name: Cookie
+          value: "{{auth_cookie}}"
+      params:
+        - name: __call
+          value: library.getDetails
+          type: query
+        - name: api_version
+          value: "4"
+          type: query
+        - name: _format
+          value: json
+          type: query
+        - name: _marker
+          value: "0"
+          type: query
+        - name: ctx
+          value: web6dot0
+          type: query
+        - name: entity_ids
+          value: 720746,755042,578407,598321,568565,485944
+          type: query
+        - name: entity_type
+          value: artist
+          type: query
+        - name: n
+          value: "50"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: text/html; charset=UTF-8
+        - name: content-length
+          value: "451"
+        - name: referrer-policy
+          value: strict-origin-when-cross-origin
+        - name: vary
+          value: User-Agent,Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: permissions-policy
+          value: accelerometer=(self), camera=(self), display-capture=(self), fullscreen=(self), gyroscope=(self), magnetometer=(self), picture-in-picture=(self), screen-wake-lock=(self), xr-spatial-tracking=(self)
+        - name: content-security-policy
+          value: object-src 'none'; connect-src 'self' https://identitytoolkit.googleapis.com https://securepubads.g.doubleclick.net https://www.google-analytics.com https://hbopenbid.pubmatic.com https://pagead2.googlesyndication.com *.pubmatic.com; font-src 'self' https://fonts.gstatic.com data:; frame-src 'self' *.safeframe.googlesyndication.com https://ads.pubmatic.com https://www.google.com; worker-src 'none';manifest-src 'self';
+        - name: x-js-user
+          value: SlNMSSQkZmQ0ZmVjZmNhMjVlOGYyZWM0YmQ4ZGQ0ZTBhYTcyOTMkJDE3ODAwNjcwOTk=
+        - name: x-be-latency
+          value: 125-5
+        - name: x-frame-options
+          value: DENY
+        - name: expires
+          value: Fri, 29 May 2026 15:04:59 GMT
+        - name: cache-control
+          value: max-age=0, no-cache, no-store
+        - name: pragma
+          value: no-cache
+        - name: date
+          value: Fri, 29 May 2026 15:04:59 GMT
+        - name: connection
+          value: keep-alive
+        - name: alt-svc
+          value: h3=":443"; ma=93600
+        - name: strict-transport-security
+          value: max-age=63072000 ; includeSubDomains
+      body:
+        type: html
+        data: '[{"id":"485944","title":"Anupam Roy","type":"artist","image":"https:\/\/c.saavncdn.com\/artists\/Anupam_Roy_007_20250623084828_150x150.jpg","perma_url":"https:\/\/www.jiosaavn.com\/artist\/anupam-roy-songs\/rhIHJvwRgOU_"},{"id":"568565","title":"Justin Bieber","type":"artist","image":"https:\/\/c.saavncdn.com\/artists\/Justin_Bieber_005_20201127112218_150x150.jpg","perma_url":"https:\/\/www.jiosaavn.com\/artist\/justin-bieber-songs\/deJJWFd1ItE_"},{"id":"578407","title":"Ed Sheeran","type":"artist","image":"https:\/\/c.saavncdn.com\/artists\/Ed_Sheeran_002_20250625073038_150x150.jpg","perma_url":"https:\/\/www.jiosaavn.com\/artist\/ed-sheeran-songs\/bWIDsVrU6DE_"},{"id":"598321","title":"Rihanna","type":"artist","image":"https:\/\/c.saavncdn.com\/artists\/Rihanna_002_20250102114144_150x150.jpg","perma_url":"https:\/\/www.jiosaavn.com\/artist\/rihanna-songs\/CAZHRcES4Mk_"},{"id":"720746","title":"Twenty One Pilots","type":"artist","image":"https:\/\/c.saavncdn.com\/artists\/Twenty_One_Pilots_003_20250825082352_150x150.jpg","perma_url":"https:\/\/www.jiosaavn.com\/artist\/twenty-one-pilots-songs\/Dx5Vty3hXGs_"},{"id":"755042","title":"Charlie Puth","type":"artist","image":"https:\/\/c.saavncdn.com\/artists\/Charlie_Puth_004_20221012071125_150x150.jpg","perma_url":"https:\/\/www.jiosaavn.com\/artist\/charlie-puth-songs\/a3MTDwwQETo_"}]'

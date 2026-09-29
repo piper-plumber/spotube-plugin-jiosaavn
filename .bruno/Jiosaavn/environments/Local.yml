@@ -1,0 +1,4 @@
+name: Local
+variables:
+  - secret: true
+    name: auth_cookie

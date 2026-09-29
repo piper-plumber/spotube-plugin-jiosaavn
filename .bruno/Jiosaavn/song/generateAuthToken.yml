@@ -1,0 +1,114 @@
+info:
+  name: generateAuthToken
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}?__call=song.generateAuthToken&url=ID2ieOjCrwfgWvL5sXl4B1ImC5QfbsDytqE5BUvBJp67EEY%2BfsXiWGlKmORPQpAajpbpyh4MIqXmqVrnUJKsZRw7tS9a8Gtq&bitrate=128&api_version=4&_format=json&ctx=web6dot0&_marker=0"
+  params:
+    - name: __call
+      value: song.generateAuthToken
+      type: query
+    - name: url
+      value: ID2ieOjCrwfgWvL5sXl4B1ImC5QfbsDytqE5BUvBJp67EEY%2BfsXiWGlKmORPQpAajpbpyh4MIqXmqVrnUJKsZRw7tS9a8Gtq
+      type: query
+    - name: bitrate
+      value: "128"
+      type: query
+    - name: api_version
+      value: "4"
+      type: query
+    - name: _format
+      value: json
+      type: query
+    - name: ctx
+      value: web6dot0
+      type: query
+    - name: _marker
+      value: "0"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: "200"
+    request:
+      url: "{{base_url}}?__call=song.generateAuthToken&url=ID2ieOjCrwfgWvL5sXl4B1ImC5QfbsDytqE5BUvBJp67EEY%2BfsXiWGlKmORPQpAajpbpyh4MIqXmqVrnUJKsZRw7tS9a8Gtq&bitrate=128&api_version=4&_format=json&ctx=web6dot0&_marker=0"
+      method: GET
+      params:
+        - name: __call
+          value: song.generateAuthToken
+          type: query
+        - name: url
+          value: ID2ieOjCrwfgWvL5sXl4B1ImC5QfbsDytqE5BUvBJp67EEY%2BfsXiWGlKmORPQpAajpbpyh4MIqXmqVrnUJKsZRw7tS9a8Gtq
+          type: query
+        - name: bitrate
+          value: "128"
+          type: query
+        - name: api_version
+          value: "4"
+          type: query
+        - name: _format
+          value: json
+          type: query
+        - name: ctx
+          value: web6dot0
+          type: query
+        - name: _marker
+          value: "0"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: text/html; charset=UTF-8
+        - name: content-length
+          value: "461"
+        - name: referrer-policy
+          value: strict-origin-when-cross-origin
+        - name: vary
+          value: User-Agent,Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: permissions-policy
+          value: accelerometer=(self), camera=(self), display-capture=(self), fullscreen=(self), gyroscope=(self), magnetometer=(self), picture-in-picture=(self), screen-wake-lock=(self), xr-spatial-tracking=(self)
+        - name: content-security-policy
+          value: object-src 'none'; connect-src 'self' https://identitytoolkit.googleapis.com https://securepubads.g.doubleclick.net https://www.google-analytics.com https://hbopenbid.pubmatic.com https://pagead2.googlesyndication.com *.pubmatic.com; font-src 'self' https://fonts.gstatic.com data:; frame-src 'self' *.safeframe.googlesyndication.com https://ads.pubmatic.com https://www.google.com; worker-src 'none';manifest-src 'self';
+        - name: access-control-allow-origin
+          value: ""
+        - name: access-control-allow-methods
+          value: GET, PUT, POST, DELETE, OPTIONS
+        - name: access-control-max-age
+          value: "1000"
+        - name: access-control-allow-headers
+          value: Content-Type, Authorization, X-Requested-With
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: x-be-latency
+          value: 200-5
+        - name: x-frame-options
+          value: DENY
+        - name: expires
+          value: Thu, 28 May 2026 13:27:17 GMT
+        - name: cache-control
+          value: max-age=0, no-cache, no-store
+        - name: pragma
+          value: no-cache
+        - name: date
+          value: Thu, 28 May 2026 13:27:17 GMT
+        - name: connection
+          value: keep-alive
+        - name: alt-svc
+          value: h3=":443"; ma=93600
+        - name: strict-transport-security
+          value: max-age=63072000 ; includeSubDomains
+      body:
+        type: html
+        data: '{"auth_url":"https:\/\/web.saavncdn.com\/723\/e8ccf584a72186d63680128d001cb8a0_160.mp4?Expires=1779975137&Signature=R0FPvPooXUNJjZlTeUtHMWh7T29QVVHYLKvlzkvJveLcwH2X~rl5jlfVCKyNViigxXTxVstKD81Xt-Cp6c~92dkdTvbn9f6VfP8LJpvUM4dLDaOkcsPxQckqPLhtzZ4QSXG3tn0EngP3YZyIq1h~R8GikMTLswpuXyLEFASSqn2ujpPrpYKt30ZqUNsvYF~MDpvtH~FA7RYqHSD7rYvDnh0BRPmhQ1MsgXz3WdsZR4BlpsjlMcYkF0aDFaFD7iEdKgwWuP3VzRye-dTytcCXEeZaVk4PySf44EPfxaGWu4pBh2F6r6jXTVYhgI8bToev14nq-y5n~JIZpCC~fKMBbQ__&Key-Pair-Id=APKAJB334VX63D3WJ5ZQ","type":"mp4","status":"success"}'

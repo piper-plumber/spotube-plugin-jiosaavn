@@ -1,0 +1,26 @@
+opencollection: 1.0.0
+
+info:
+  name: Jiosaavn
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+request:
+  variables:
+    - name: base_url
+      value: https://www.jiosaavn.com/api.php
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

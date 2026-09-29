@@ -1,0 +1,116 @@
+info:
+  name: getFeaturedPlaylists
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}?__call=content.getFeaturedPlaylists&api_version=4&_format=json&_marker=0&ctx=web6dot0"
+  params:
+    - name: __call
+      value: content.getFeaturedPlaylists
+      type: query
+    - name: api_version
+      value: "4"
+      type: query
+    - name: _format
+      value: json
+      type: query
+    - name: _marker
+      value: "0"
+      type: query
+    - name: ctx
+      value: web6dot0
+      type: query
+    - name: featured
+      value: "true"
+      type: query
+    - name: p
+      value: "1"
+      type: query
+    - name: n
+      value: "50"
+      type: query
+    - name: language
+      value: hindi
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: "200"
+    request:
+      url: "{{base_url}}?__call=content.getFeaturedPlaylists&api_version=4&_format=json&_marker=0&ctx=web6dot0"
+      method: GET
+      params:
+        - name: __call
+          value: content.getFeaturedPlaylists
+          type: query
+        - name: api_version
+          value: "4"
+          type: query
+        - name: _format
+          value: json
+          type: query
+        - name: _marker
+          value: "0"
+          type: query
+        - name: ctx
+          value: web6dot0
+          type: query
+        - name: featured
+          value: "true"
+          type: query
+        - name: p
+          value: "1"
+          type: query
+        - name: n
+          value: "50"
+          type: query
+        - name: language
+          value: hindi
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: text/html; charset=UTF-8
+        - name: content-length
+          value: "2490"
+        - name: referrer-policy
+          value: strict-origin-when-cross-origin
+        - name: vary
+          value: User-Agent,Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: permissions-policy
+          value: accelerometer=(self), camera=(self), display-capture=(self), fullscreen=(self), gyroscope=(self), magnetometer=(self), picture-in-picture=(self), screen-wake-lock=(self), xr-spatial-tracking=(self)
+        - name: content-security-policy
+          value: object-src 'none'; connect-src 'self' https://identitytoolkit.googleapis.com https://securepubads.g.doubleclick.net https://www.google-analytics.com https://hbopenbid.pubmatic.com https://pagead2.googlesyndication.com *.pubmatic.com; font-src 'self' https://fonts.gstatic.com data:; frame-src 'self' *.safeframe.googlesyndication.com https://ads.pubmatic.com https://www.google.com; worker-src 'none';manifest-src 'self';
+        - name: x-be-latency
+          value: 110-11
+        - name: x-frame-options
+          value: DENY
+        - name: expires
+          value: Thu, 28 May 2026 13:24:27 GMT
+        - name: cache-control
+          value: max-age=0, no-cache, no-store
+        - name: pragma
+          value: no-cache
+        - name: date
+          value: Thu, 28 May 2026 13:24:27 GMT
+        - name: connection
+          value: keep-alive
+        - name: alt-svc
+          value: h3=":443"; ma=93600
+        - name: strict-transport-security
+          value: max-age=63072000 ; includeSubDomains
+      body:
+        type: html
+        data: "{\"data\":[{\"id\":\"932189657\",\"title\":\"Best Of Dance - Hindi\",\"subtitle\":\"146.3K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/BestOfDanceHindi_20251125093505.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/best-of-dance-hindi\\/qVvfieICUY5ieSJqt9HmOQ__\",\"more_info\":{\"song_count\":\"50\",\"firstname\":\"JioSaavn\",\"follower_count\":\"146337\",\"last_updated\":\"1779234354\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"1080335349\",\"title\":\"Hindi Hit Songs\",\"subtitle\":\"Just Updated\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/HindiHitSongs_20260423164622.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/hindi-hit-songs\\/ZodsPn39CSjwxP8tCU-flw__\",\"more_info\":{\"song_count\":\"23\",\"firstname\":\"JioSaavn\",\"follower_count\":\"61372\",\"last_updated\":\"1779856689\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"58057412\",\"title\":\"Let's Play - Arijit Singh - Hindi\",\"subtitle\":\"770.2K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/Let_sPlayArijitSinghHindi_20240812070403.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/lets-play-arijit-singh-hindi\\/Iz0pi7nkjUE_\",\"more_info\":{\"song_count\":\"47\",\"firstname\":\"JioSaavn\",\"follower_count\":\"770205\",\"last_updated\":\"1779666568\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"158223987\",\"title\":\"Chill Maaro\",\"subtitle\":\"56.4K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/ChillMaaro_20260420042435.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/chill-maaro\\/CZTTBas4j8RieSJqt9HmOQ__\",\"more_info\":{\"song_count\":\"23\",\"firstname\":\"JioSaavn\",\"follower_count\":\"56413\",\"last_updated\":\"1779240072\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"107724265\",\"title\":\"Punjab Se Bollywood\",\"subtitle\":\"348.8K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/PunjabseBollywood_20260423164552.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/punjab-se-bollywood\\/obx07Zza,rHuCJW60TJk1Q__\",\"more_info\":{\"song_count\":\"22\",\"firstname\":\"JioSaavn\",\"follower_count\":\"348837\",\"last_updated\":\"1779233940\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"1265890645\",\"title\":\"ArtistOne Finds\",\"subtitle\":\"2.2K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/ArtistOneFinds_20260522100439.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/artistone-finds\\/nOyNH0fuWtGP3AiNrzXpzA__\",\"more_info\":{\"song_count\":\"40\",\"firstname\":\"JioSaavn\",\"follower_count\":\"2164\",\"last_updated\":\"1779420783\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"158221880\",\"title\":\"Best Of Retro\",\"subtitle\":\"44.2K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/BestOfRetro_20260521072659.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/best-of-retro\\/IFTYFbu2anRuOxiEGmm6lQ__\",\"more_info\":{\"song_count\":\"35\",\"firstname\":\"JioSaavn\",\"follower_count\":\"44184\",\"last_updated\":\"1779323328\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"155321561\",\"title\":\"Best Of 2000s - Hindi\",\"subtitle\":\"100.6K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/BestOf2000sHindi_20260403094953.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/best-of-2000s-hindi\\/w,zEBfumNkQGSw2I1RxdhQ__\",\"more_info\":{\"song_count\":\"50\",\"firstname\":\"JioSaavn\",\"follower_count\":\"100622\",\"last_updated\":\"1779381422\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"111163065\",\"title\":\"Workout - 1 Hour\",\"subtitle\":\"79.9K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/Workout1Hour_20260403095001.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/workout-1-hour\\/Il9pGRwrp4ruCJW60TJk1Q__\",\"more_info\":{\"song_count\":\"25\",\"firstname\":\"JioSaavn\",\"follower_count\":\"79907\",\"last_updated\":\"1779234581\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"83421839\",\"title\":\"Ishqiyaan\",\"subtitle\":\"Just Updated\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/Ishqiyaan_20260515072729.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/ishqiyaan\\/dyqSeSlJrvI_\",\"more_info\":{\"song_count\":\"25\",\"firstname\":\"JioSaavn\",\"follower_count\":\"681380\",\"last_updated\":\"1779838308\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"107605145\",\"title\":\"Best Of Indie - Hindi\",\"subtitle\":\"14.5K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/BestOfIndieHindi_20240624065052.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/best-of-indie-hindi\\/jnjK2XTv9-3uCJW60TJk1Q__\",\"more_info\":{\"song_count\":\"25\",\"firstname\":\"JioSaavn\",\"follower_count\":\"14539\",\"last_updated\":\"1779233881\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"6689255\",\"title\":\"Taaza Tunes\",\"subtitle\":\"Just Updated\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/TaazaTunes_20260526103940.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/taaza-tunes\\/Me5RridRfDk_\",\"more_info\":{\"song_count\":\"50\",\"firstname\":\"JioSaavn\",\"follower_count\":\"670485\",\"last_updated\":\"1779941841\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"1265126631\",\"title\":\"Romantic Hits 2025 - Hindi\",\"subtitle\":\"8.4K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/RomanticHits2025Hindi_20260109034728.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/romantic-hits-2025-hindi\\/Oa5rVWYKK7k1jNjMCv,bnQ__\",\"more_info\":{\"song_count\":\"20\",\"firstname\":\"JioSaavn\",\"follower_count\":\"8387\",\"last_updated\":\"1767901731\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"5148894\",\"title\":\"Nach Le\",\"subtitle\":\"Just Updated\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/NachLe_20260424102207.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/nach-le\\/UQjTO6rFZfc_\",\"more_info\":{\"song_count\":\"25\",\"firstname\":\"JioSaavn\",\"follower_count\":\"569568\",\"last_updated\":\"1779838300\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"1265127670\",\"title\":\"Pop Hits 2025 - Hindi\",\"subtitle\":\"1.2K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/PopHits2025Hindi_20260109034815.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/pop-hits-2025-hindi\\/YiB0TuhgUdVwtkLw7-JlUw__\",\"more_info\":{\"song_count\":\"20\",\"firstname\":\"JioSaavn\",\"follower_count\":\"1228\",\"last_updated\":\"1767901702\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"156473621\",\"title\":\"Asli Pop\",\"subtitle\":\"Just Updated\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/AsliPop_20260429093318.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/asli-pop\\/pDQtHvJRh4IGSw2I1RxdhQ__\",\"more_info\":{\"song_count\":\"25\",\"firstname\":\"JioSaavn\",\"follower_count\":\"274039\",\"last_updated\":\"1779838337\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"39416670\",\"title\":\"Let's Play - Kumar Sanu - Hindi\",\"subtitle\":\"367.7K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/Let_sPlayKumarSanuHindi_20240719111751.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/lets-play-kumar-sanu-hindi\\/QeBmhG7Y1uE_\",\"more_info\":{\"song_count\":\"50\",\"firstname\":\"JioSaavn\",\"follower_count\":\"367748\",\"last_updated\":\"1779235091\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"158221835\",\"title\":\"Best Of Sad Songs - Hindi\",\"subtitle\":\"72.7K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/BestOfSadSongsHindi_20260330062315.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/best-of-sad-songs-hindi\\/WjjhR,A3iLLuCJW60TJk1Q__\",\"more_info\":{\"song_count\":\"26\",\"firstname\":\"JioSaavn\",\"follower_count\":\"72708\",\"last_updated\":\"1779235977\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"101704478\",\"title\":\"Jhakaas Remakes\",\"subtitle\":\"Just Updated\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/JhakaasRemakes_20251125091635.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/jhakaas-remakes\\/7e2LtwVBX6JFo9wdEAzFBA__\",\"more_info\":{\"song_count\":\"25\",\"firstname\":\"JioSaavn\",\"follower_count\":\"420104\",\"last_updated\":\"1779921215\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"1265126272\",\"title\":\"Chartbusters 2025 - Hindi\",\"subtitle\":\"21.4K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/Chartbusters2025Hindi_20260109035032.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/chartbusters-2025-hindi\\/okORMC-Vh31xWb5,FqsjKg__\",\"more_info\":{\"song_count\":\"50\",\"firstname\":\"JioSaavn\",\"follower_count\":\"21444\",\"last_updated\":\"1767901858\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"1265128038\",\"title\":\"Dance Hits 2025 - Hindi\",\"subtitle\":\"5.2K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/DanceHits2025Hindi_20260109034621.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/dance-hits-2025-hindi\\/yMKqTwZsFGpfHQulIAsf5w__\",\"more_info\":{\"song_count\":\"20\",\"firstname\":\"JioSaavn\",\"follower_count\":\"5153\",\"last_updated\":\"1768269633\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"940775963\",\"title\":\"Best Of Pop - Hindi\",\"subtitle\":\"41.7K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/BestOfIndipopHindi_20260504065326.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/best-of-pop-hindi\\/xHa-oM3ldXAwkg5tVhI3fw__\",\"more_info\":{\"song_count\":\"50\",\"firstname\":\"JioSaavn\",\"follower_count\":\"41667\",\"last_updated\":\"1779235796\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"72903410\",\"title\":\"Sirf Unplugged\",\"subtitle\":\"109.3K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/SirfUnplugged_20250530053253.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/sirf-unplugged\\/QkY0PeqdTW4_\",\"more_info\":{\"song_count\":\"30\",\"firstname\":\"JioSaavn\",\"follower_count\":\"109312\",\"last_updated\":\"1779235446\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"903166403\",\"title\":\"Best Of Romance - Hindi\",\"subtitle\":\"239.1K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/BestOfRomanceHindi_20260302042321.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/best-of-romance-hindi\\/SBKnUgjNeMIwkg5tVhI3fw__\",\"more_info\":{\"song_count\":\"49\",\"firstname\":\"JioSaavn\",\"follower_count\":\"239141\",\"last_updated\":\"1779234293\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"1164340768\",\"title\":\"Best Of 2010s - Hindi\",\"subtitle\":\"61.1K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/BestOf2010s_20251217103005.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/best-of-2010s-hindi\\/gn19HTwL-lfgEhiRleA1SQ__\",\"more_info\":{\"song_count\":\"43\",\"firstname\":\"JioSaavn\",\"follower_count\":\"61149\",\"last_updated\":\"1779381432\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"1785203\",\"title\":\"Let's Play - Asha Bhosle\",\"subtitle\":\"19.1K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/Let_sPlayAshaBhosle_20250310050619.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/lets-play-asha-bhosle\\/vNOI3c3BND4_\",\"more_info\":{\"song_count\":\"50\",\"firstname\":\"JioSaavn\",\"follower_count\":\"19138\",\"last_updated\":\"1776904546\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"1079091671\",\"title\":\"Asha Bhosle - Love Songs - Hindi\",\"subtitle\":\"2.7K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/AshaBhosle_sRomanticHits_20250106102002.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/asha-bhosle-love-songs-hindi\\/rLtI36FmdWa8m7pOZz2ziw__\",\"more_info\":{\"song_count\":\"24\",\"firstname\":\"JioSaavn\",\"follower_count\":\"2739\",\"last_updated\":\"1773023756\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"1079215624\",\"title\":\"Asha Bhosle - Party Songs - Hindi\",\"subtitle\":\"1.2K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/AshaBhosle_sDanceHits_20250106102025.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/asha-bhosle-party-songs-hindi\\/-,Imgwctapwva8qgomsMOw__\",\"more_info\":{\"song_count\":\"20\",\"firstname\":\"JioSaavn\",\"follower_count\":\"1170\",\"last_updated\":\"1765936163\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"618305127\",\"title\":\"Decade Of 2010s: Romance - Hindi\",\"subtitle\":\"95.1K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/DecadeOf2010s-RomanceHindi_20260302042804.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/decade-of-2010s-romance-hindi\\/7OGmFfsGtN9ieSJqt9HmOQ__\",\"more_info\":{\"song_count\":\"36\",\"firstname\":\"JioSaavn\",\"follower_count\":\"95084\",\"last_updated\":\"1779240030\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true},{\"id\":\"159470178\",\"title\":\"Best Of 70s - Hindi\",\"subtitle\":\"29K Followers\",\"type\":\"playlist\",\"image\":\"https:\\/\\/c.saavncdn.com\\/editorial\\/BestOf70s_20240502070609.jpg\",\"perma_url\":\"https:\\/\\/www.jiosaavn.com\\/featured\\/best-of-70s-hindi\\/GnSiP1i2G6ZFo9wdEAzFBA__\",\"more_info\":{\"song_count\":\"50\",\"firstname\":\"JioSaavn\",\"follower_count\":\"29022\",\"last_updated\":\"1779381420\",\"uid\":\"phulki_user\"},\"explicit_content\":\"0\",\"mini_obj\":true}],\"count\":30,\"last_page\":false}"

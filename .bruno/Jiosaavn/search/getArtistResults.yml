@@ -1,0 +1,110 @@
+info:
+  name: getArtistResults
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}?__call=search.getArtistResults&api_version=4&_format=json&_marker=0&ctx=web6dot0&q=Arijit Singh&p=1&n=20"
+  params:
+    - name: __call
+      value: search.getArtistResults
+      type: query
+    - name: api_version
+      value: "4"
+      type: query
+    - name: _format
+      value: json
+      type: query
+    - name: _marker
+      value: "0"
+      type: query
+    - name: ctx
+      value: web6dot0
+      type: query
+    - name: q
+      value: Arijit Singh
+      type: query
+    - name: p
+      value: "1"
+      type: query
+    - name: n
+      value: "20"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: "200"
+    request:
+      url: "{{base_url}}?__call=search.getArtistResults&api_version=4&_format=json&_marker=0&ctx=web6dot0&q=Arijit Singh&p=1&n=20"
+      method: GET
+      params:
+        - name: __call
+          value: search.getArtistResults
+          type: query
+        - name: api_version
+          value: "4"
+          type: query
+        - name: _format
+          value: json
+          type: query
+        - name: _marker
+          value: "0"
+          type: query
+        - name: ctx
+          value: web6dot0
+          type: query
+        - name: q
+          value: Arijit Singh
+          type: query
+        - name: p
+          value: "1"
+          type: query
+        - name: n
+          value: "20"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: text/html; charset=UTF-8
+        - name: content-length
+          value: "1429"
+        - name: referrer-policy
+          value: strict-origin-when-cross-origin
+        - name: vary
+          value: User-Agent,Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: permissions-policy
+          value: accelerometer=(self), camera=(self), display-capture=(self), fullscreen=(self), gyroscope=(self), magnetometer=(self), picture-in-picture=(self), screen-wake-lock=(self), xr-spatial-tracking=(self)
+        - name: content-security-policy
+          value: object-src 'none'; connect-src 'self' https://identitytoolkit.googleapis.com https://securepubads.g.doubleclick.net https://www.google-analytics.com https://hbopenbid.pubmatic.com https://pagead2.googlesyndication.com *.pubmatic.com; font-src 'self' https://fonts.gstatic.com data:; frame-src 'self' *.safeframe.googlesyndication.com https://ads.pubmatic.com https://www.google.com; worker-src 'none';manifest-src 'self';
+        - name: x-be-latency
+          value: 129-8
+        - name: x-frame-options
+          value: DENY
+        - name: expires
+          value: Sun, 31 May 2026 04:07:12 GMT
+        - name: cache-control
+          value: max-age=0, no-cache, no-store
+        - name: pragma
+          value: no-cache
+        - name: date
+          value: Sun, 31 May 2026 04:07:12 GMT
+        - name: connection
+          value: keep-alive
+        - name: alt-svc
+          value: h3=":443"; ma=93600
+        - name: strict-transport-security
+          value: max-age=63072000 ; includeSubDomains
+      body:
+        type: html
+        data: '{"total":187,"start":1,"results":[{"name":"Arijit Singh","id":"459320","ctr":40313,"entity":1,"image":"https:\/\/c.saavncdn.com\/artists\/Arijit_Singh_004_20241118063717_50x50.jpg","role":"Artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/arijit-singh-songs\/LlRWpHzy3Hk_","type":"artist","mini_obj":true,"isRadioPresent":true,"is_followed":false},{"name":"Pritam & Arijit Singh","id":"702776","ctr":0,"entity":0,"image":"https:\/\/www.jiosaavn.com\/_i\/3.0\/artist-default-film.png","role":"Artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/pritam-arijit-singh-songs\/yE1eQoLw,8Q_","type":"artist","mini_obj":true,"isRadioPresent":false,"is_followed":false},{"name":"Sachin-Jigar|Arijit Singh","id":"16551820","ctr":21,"entity":0,"image":"https:\/\/www.jiosaavn.com\/_i\/3.0\/artist-default-music.png","role":"Artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/sachin-jigar%7carijit-singh-songs\/S87pvBT6eb4_","type":"artist","mini_obj":true,"isRadioPresent":false,"is_followed":false},{"name":"Pritam, Arijit Singh, Badshah, Jonita Gandhi & Nakash Aziz","id":"4179092","ctr":0,"entity":0,"image":"https:\/\/www.jiosaavn.com\/_i\/3.0\/artist-default-music.png","role":"Artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/pritam-arijit-singh-badshah-jonita-gandhi-nakash-aziz-songs\/te-SX8PIHtQ_","type":"artist","mini_obj":true,"isRadioPresent":false,"is_followed":false},{"name":"Arijit Singh & Chinmayi Sripada","id":"862435","ctr":0,"entity":0,"image":"https:\/\/www.jiosaavn.com\/_i\/3.0\/artist-default-music.png","role":"Artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/arijit-singh-chinmayi-sripada-songs\/zNFEeX4M4Wk_","type":"artist","mini_obj":true,"isRadioPresent":false,"is_followed":false},{"name":"Javed - Mohsin, Arijit Singh &amp; Shreya Ghoshal","id":"5393134","ctr":0,"entity":0,"image":"https:\/\/www.jiosaavn.com\/_i\/3.0\/artist-default-music.png","role":"Artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/javed-mohsin-arijit-singh-shreya-ghoshal-songs\/AARUxWYdAbo_","type":"artist","mini_obj":true,"isRadioPresent":false,"is_followed":false},{"name":"Pritam, Arijit Singh &amp; Amitabh Bhattacharya","id":"12841161","ctr":0,"entity":0,"image":"https:\/\/www.jiosaavn.com\/_i\/3.0\/artist-default-music.png","role":"Artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/pritam-arijit-singh-amitabh-bhattacharya-songs\/ES25qtjiVmo_","type":"artist","mini_obj":true,"isRadioPresent":false,"is_followed":false},{"name":"\u2060Arijit Singh","id":"21886849","ctr":0,"entity":0,"image":"https:\/\/www.jiosaavn.com\/_i\/3.0\/artist-default-music.png","role":"Artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/%e2%81%a0arijit-singh-songs\/k0dg2E1w9Ic_","type":"artist","mini_obj":true,"isRadioPresent":false,"is_followed":false},{"name":"Hariharan, Swarnalatha, Kumar Sanu, Sapna Mukherjee, Lata Mangeshkar, Aamir Khan, Alka Yagnik, Arijit Singh, Atif Aslam, Shre...","id":"19265237","ctr":14,"entity":0,"image":"https:\/\/www.jiosaavn.com\/_i\/3.0\/artist-default-film.png","role":"Artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/hariharan-swarnalatha-kumar-sanu-sapna-mukherjee-lata-mangeshkar-aamir-khan-alka-yagnik-arijit-singh-atif-aslam-shre...-songs\/KMTH3LDrcL8_","type":"artist","mini_obj":true,"isRadioPresent":false,"is_followed":false},{"name":"Tanishk Bagchi, Arijit Singh & Asees Kaur","id":"4074192","ctr":0,"entity":0,"image":"https:\/\/www.jiosaavn.com\/_i\/3.0\/artist-default-music.png","role":"Artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/tanishk-bagchi-arijit-singh-asees-kaur-songs\/H-wXNQmZODc_","type":"artist","mini_obj":true,"isRadioPresent":false,"is_followed":false},{"name":"Jeet Gannguli, Pritam & Arijit Singh","id":"4579374","ctr":0,"entity":0,"image":"https:\/\/www.jiosaavn.com\/_i\/3.0\/artist-default-music.png","role":"Artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/jeet-gannguli-pritam-arijit-singh-songs\/1iDkHeN68bE_","type":"artist","mini_obj":true,"isRadioPresent":false,"is_followed":false},{"name":"DJ Shilpi Sharma, Arijit Singh, Rahat Fateh Ali Khan, Shafqat Amanat Ali, Shreya Ghoshal, Tochi Raina, Antara Mitra & Nikhil ...","id":"4588764","ctr":0,"entity":0,"image":"https:\/\/www.jiosaavn.com\/_i\/3.0\/artist-default-music.png","role":"Artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/dj-shilpi-sharma-arijit-singh-rahat-fateh-ali-khan-shafqat-amanat-ali-shreya-ghoshal-tochi-raina-antara-mitra-nikhil-...-songs\/UZoS3aQCU44_","type":"artist","mini_obj":true,"isRadioPresent":false,"is_followed":false},{"name":"Arijit Singh Tarannum Malik Earl Edgar D Raja Hasan","id":"472346","ctr":0,"entity":0,"image":"https:\/\/www.jiosaavn.com\/_i\/3.0\/artist-default-music.png","role":"Artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/arijit-singh-tarannum-malik-earl-edgar-d-raja-hasan-songs\/qtDN75ZeQzQ_","type":"artist","mini_obj":true,"isRadioPresent":false,"is_followed":false},{"name":"Shilpi Sharma & Arijit Singh","id":"3738874","ctr":0,"entity":0,"image":"https:\/\/www.jiosaavn.com\/_i\/3.0\/artist-default-film.png","role":"Artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/shilpi-sharma-arijit-singh-songs\/VyPrXeSpo,c_","type":"artist","mini_obj":true,"isRadioPresent":false,"is_followed":false},{"name":"Arijit Singh & Antara Mitra","id":"3915743","ctr":0,"entity":0,"image":"https:\/\/www.jiosaavn.com\/_i\/3.0\/artist-default-music.png","role":"Artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/arijit-singh-antara-mitra-songs\/87s4BDw8yeo_","type":"artist","mini_obj":true,"isRadioPresent":true,"is_followed":false},{"name":"DJ Shilpi Sharma, Arijit Singh, Rahat Fateh Ali Khan, Shafqat Amanat Ali, Shreya Ghoshal, Tochi Raina, Antara Mitra & ...","id":"3915742","ctr":0,"entity":0,"image":"https:\/\/www.jiosaavn.com\/_i\/3.0\/artist-default-music.png","role":"Artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/dj-shilpi-sharma-arijit-singh-rahat-fateh-ali-khan-shafqat-amanat-ali-shreya-ghoshal-tochi-raina-antara-mitra-...-songs\/W5dHXoAv8SU_","type":"artist","mini_obj":true,"isRadioPresent":false,"is_followed":false},{"name":"A.R. Rahman &amp; Arijit Singh","id":"4187724","ctr":0,"entity":0,"image":"https:\/\/www.jiosaavn.com\/_i\/3.0\/artist-default-music.png","role":"Artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/a.r.-rahman-arijit-singh-songs\/L7Ve3NjUspQ_","type":"artist","mini_obj":true,"isRadioPresent":true,"is_followed":false},{"name":"Amit Trivedi, Arijit Singh & Chinmayi Sripada","id":"4187725","ctr":0,"entity":0,"image":"https:\/\/www.jiosaavn.com\/_i\/3.0\/artist-default-music.png","role":"Artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/amit-trivedi-arijit-singh-chinmayi-sripada-songs\/xRpwjjw5qhE_","type":"artist","mini_obj":true,"isRadioPresent":false,"is_followed":false},{"name":"Ilaiyaraaja, Amit Trivedi, Arijit Singh &","id":"4361600","ctr":0,"entity":0,"image":"https:\/\/www.jiosaavn.com\/_i\/3.0\/artist-default-music.png","role":"Artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/ilaiyaraaja-amit-trivedi-arijit-singh--songs\/LpHcX0KX61c_","type":"artist","mini_obj":true,"isRadioPresent":false,"is_followed":false},{"name":"A.R. Rahman, Arijit Singh &","id":"4361599","ctr":0,"entity":0,"image":"https:\/\/www.jiosaavn.com\/_i\/3.0\/artist-default-music.png","role":"Artist","perma_url":"https:\/\/www.jiosaavn.com\/artist\/a.r.-rahman-arijit-singh--songs\/rfvNg5AeZqg_","type":"artist","mini_obj":true,"isRadioPresent":false,"is_followed":false}]}'
