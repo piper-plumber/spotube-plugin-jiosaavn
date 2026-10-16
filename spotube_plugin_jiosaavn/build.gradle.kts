@@ -1,6 +1,6 @@
 import com.codingfeline.buildkonfig.compiler.FieldSpec
-import dev.krtirtho.PluginAbility
-import dev.krtirtho.PluginCapability
+import org.spotube.PluginAbility
+import org.spotube.PluginCapability
 import org.jetbrains.kotlin.gradle.targets.js.yarn.YarnPlugin
 import org.jetbrains.kotlin.gradle.targets.js.yarn.YarnRootExtension
 import java.util.Properties
@@ -25,7 +25,7 @@ spotubePlugin {
         PluginCapability.PERSISTENT_STORAGE,
         PluginCapability.WEBVIEW
     )
-    abilities = listOf(PluginAbility.METADATA)
+    abilities = listOf(PluginAbility.METADATA, PluginAbility.AUDIO)
     license = "AGPL-3.0-or-later"
     contact = "308775074+piper-plumber@users.noreply.github.com"
     repository = "https://github.com/piper.plumber/spotube-plugin-jiosaavn"

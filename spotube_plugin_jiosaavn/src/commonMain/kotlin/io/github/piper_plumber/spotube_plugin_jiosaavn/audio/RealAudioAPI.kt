@@ -1,14 +1,14 @@
 package io.github.piper_plumber.spotube_plugin_jiosaavn.audio
 
-import dev.krtirtho.plugin_interfaces.host_apis.CryptoAPI
-import dev.krtirtho.plugin_interfaces.host_apis.LegacyCipherAlgorithms
-import dev.krtirtho.plugin_interfaces.plugin_apis.audio.AudioAPI
-import dev.krtirtho.plugin_interfaces.plugin_apis.audio.AudioFormat
-import dev.krtirtho.plugin_interfaces.plugin_apis.audio.AudioQuality
-import dev.krtirtho.plugin_interfaces.plugin_apis.audio.AudioSource
-import dev.krtirtho.plugin_interfaces.plugin_apis.audio.AudioStream
-import dev.krtirtho.plugin_interfaces.plugin_apis.metadata.common.Thumbnail
-import dev.krtirtho.plugin_interfaces.plugin_apis.metadata.track.MetadataTrack
+import org.spotube.plugin_interfaces.host_apis.CryptoAPI
+import org.spotube.plugin_interfaces.host_apis.LegacyCipherAlgorithms
+import org.spotube.plugin_interfaces.plugin_apis.audio.AudioAPI
+import org.spotube.plugin_interfaces.plugin_apis.audio.AudioFormat
+import org.spotube.plugin_interfaces.plugin_apis.audio.AudioQuality
+import org.spotube.plugin_interfaces.plugin_apis.audio.AudioSource
+import org.spotube.plugin_interfaces.plugin_apis.audio.AudioStream
+import org.spotube.plugin_interfaces.plugin_apis.metadata.common.Thumbnail
+import org.spotube.plugin_interfaces.plugin_apis.metadata.track.MetadataTrack
 import io.github.piper_plumber.spotube_plugin_jiosaavn.core.Jiosaavn
 import io.github.piper_plumber.spotube_plugin_jiosaavn.core.model.IdTokenPair
 import io.github.piper_plumber.spotube_plugin_jiosaavn.core.model.Song

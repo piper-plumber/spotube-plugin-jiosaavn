@@ -1,7 +1,7 @@
 package io.github.piper_plumber.spotube_plugin_jiosaavn.audio
 
-import dev.krtirtho.plugin_interfaces.plugin_apis.metadata.artist.MetadataArtist
-import dev.krtirtho.plugin_interfaces.plugin_apis.metadata.track.MetadataTrack
+import org.spotube.plugin_interfaces.plugin_apis.metadata.artist.MetadataArtist
+import org.spotube.plugin_interfaces.plugin_apis.metadata.track.MetadataTrack
 import io.github.piper_plumber.spotube_plugin_jiosaavn.test_utils.JVMCryptoAPI
 import io.github.piper_plumber.spotube_plugin_jiosaavn.test_utils.TestFixture
 import kotlinx.coroutines.test.runTest

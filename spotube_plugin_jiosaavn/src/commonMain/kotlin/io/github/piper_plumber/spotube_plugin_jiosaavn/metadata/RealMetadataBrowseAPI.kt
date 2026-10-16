@@ -1,17 +1,17 @@
 package io.github.piper_plumber.spotube_plugin_jiosaavn.metadata
 
-import dev.krtirtho.plugin_interfaces.plugin_apis.metadata.album.MetadataAlbum
-import dev.krtirtho.plugin_interfaces.plugin_apis.metadata.album.MetadataAlbumType
-import dev.krtirtho.plugin_interfaces.plugin_apis.metadata.artist.MetadataArtist
-import dev.krtirtho.plugin_interfaces.plugin_apis.metadata.browse.MetadataBrowseAPI
-import dev.krtirtho.plugin_interfaces.plugin_apis.metadata.browse.MetadataBrowseGenre
-import dev.krtirtho.plugin_interfaces.plugin_apis.metadata.browse.MetadataBrowseItem
-import dev.krtirtho.plugin_interfaces.plugin_apis.metadata.browse.MetadataBrowseSection
-import dev.krtirtho.plugin_interfaces.plugin_apis.metadata.common.PaginationResult
-import dev.krtirtho.plugin_interfaces.plugin_apis.metadata.common.PaginationStrategy
-import dev.krtirtho.plugin_interfaces.plugin_apis.metadata.common.Thumbnail
-import dev.krtirtho.plugin_interfaces.plugin_apis.metadata.playlist.MetadataPlaylist
-import dev.krtirtho.plugin_interfaces.plugin_apis.metadata.user.MetadataUser
+import org.spotube.plugin_interfaces.plugin_apis.metadata.album.MetadataAlbum
+import org.spotube.plugin_interfaces.plugin_apis.metadata.album.MetadataAlbumType
+import org.spotube.plugin_interfaces.plugin_apis.metadata.artist.MetadataArtist
+import org.spotube.plugin_interfaces.plugin_apis.metadata.browse.MetadataBrowseAPI
+import org.spotube.plugin_interfaces.plugin_apis.metadata.browse.MetadataBrowseGenre
+import org.spotube.plugin_interfaces.plugin_apis.metadata.browse.MetadataBrowseItem
+import org.spotube.plugin_interfaces.plugin_apis.metadata.browse.MetadataBrowseSection
+import org.spotube.plugin_interfaces.plugin_apis.metadata.common.PaginationResult
+import org.spotube.plugin_interfaces.plugin_apis.metadata.common.PaginationStrategy
+import org.spotube.plugin_interfaces.plugin_apis.metadata.common.Thumbnail
+import org.spotube.plugin_interfaces.plugin_apis.metadata.playlist.MetadataPlaylist
+import org.spotube.plugin_interfaces.plugin_apis.metadata.user.MetadataUser
 import io.github.piper_plumber.spotube_plugin_jiosaavn.core.Jiosaavn
 import io.github.piper_plumber.spotube_plugin_jiosaavn.core.model.Album
 import io.github.piper_plumber.spotube_plugin_jiosaavn.core.model.Artist
@@ -35,7 +35,8 @@ class RealMetadataBrowseAPI(
     }
 
     override suspend fun genres(): List<MetadataBrowseGenre> {
-        TODO("Not yet implemented")
+        // JioSaavn has no genre taxonomy; list() always returns the home feed.
+        return listOf(MetadataBrowseGenre(id = "home-genre", name = "All"))
     }
 
     override suspend fun list(genreId: String, pagination: PaginationStrategy?): PaginationResult<MetadataBrowseSection> {
@@ -186,7 +187,7 @@ class RealMetadataBrowseAPI(
         }
     }
 
-    private fun LaunchSong.toMetadataTrack(): dev.krtirtho.plugin_interfaces.plugin_apis.metadata.track.MetadataTrack {
+    private fun LaunchSong.toMetadataTrack(): org.spotube.plugin_interfaces.plugin_apis.metadata.track.MetadataTrack {
         val artists = this.moreInfo.artistMap?.primaryArtists
             ?.takeIf { it.isNotEmpty() }
             ?.map { it.toArtistBasic() }
@@ -195,7 +196,7 @@ class RealMetadataBrowseAPI(
                 ?.map { it.toArtistBasic() }
             ?: emptyList()
 
-        return dev.krtirtho.plugin_interfaces.plugin_apis.metadata.track.MetadataTrack(
+        return org.spotube.plugin_interfaces.plugin_apis.metadata.track.MetadataTrack(
             id = IdTokenPair.asString(this.id, this.permaUrl),
             title = this.title,
             durationMs = this.moreInfo.duration?.toLongOrNull()?.times(1000) ?: 0L,

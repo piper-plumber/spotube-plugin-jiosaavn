@@ -1,6 +1,6 @@
 package io.github.piper_plumber.spotube_plugin_jiosaavn.core
 
-import dev.krtirtho.plugin_interfaces.extras.spotor.SpotrClient
+import org.spotube.plugin_interfaces.extras.spotor.SpotrClient
 import io.github.piper_plumber.spotube_plugin_jiosaavn.core.model.SocialResponse
 import io.github.piper_plumber.spotube_plugin_jiosaavn.core.model.FollowingDetails
 import io.github.piper_plumber.spotube_plugin_jiosaavn.core.model.TopArtistsResponse

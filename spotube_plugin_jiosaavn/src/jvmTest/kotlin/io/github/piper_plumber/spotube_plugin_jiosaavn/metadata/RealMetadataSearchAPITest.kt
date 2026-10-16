@@ -1,7 +1,7 @@
 package io.github.piper_plumber.spotube_plugin_jiosaavn.metadata
 
-import dev.krtirtho.plugin_interfaces.plugin_apis.metadata.search.MetadataSearchResult
-import dev.krtirtho.plugin_interfaces.plugin_apis.metadata.search.MetadataSupportedSearchType
+import org.spotube.plugin_interfaces.plugin_apis.metadata.search.MetadataSearchResult
+import org.spotube.plugin_interfaces.plugin_apis.metadata.search.MetadataSupportedSearchType
 import io.github.piper_plumber.spotube_plugin_jiosaavn.core.model.IdTokenPair
 import io.github.piper_plumber.spotube_plugin_jiosaavn.test_utils.TestFixture
 import kotlinx.coroutines.test.runTest

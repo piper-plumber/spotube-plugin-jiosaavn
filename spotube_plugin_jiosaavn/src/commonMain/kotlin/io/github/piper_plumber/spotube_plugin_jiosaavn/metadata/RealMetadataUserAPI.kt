@@ -1,8 +1,8 @@
 package io.github.piper_plumber.spotube_plugin_jiosaavn.metadata
 
-import dev.krtirtho.plugin_interfaces.plugin_apis.metadata.common.Thumbnail
-import dev.krtirtho.plugin_interfaces.plugin_apis.metadata.user.MetadataUser
-import dev.krtirtho.plugin_interfaces.plugin_apis.metadata.user.MetadataUserAPI
+import org.spotube.plugin_interfaces.plugin_apis.metadata.common.Thumbnail
+import org.spotube.plugin_interfaces.plugin_apis.metadata.user.MetadataUser
+import org.spotube.plugin_interfaces.plugin_apis.metadata.user.MetadataUserAPI
 import io.github.piper_plumber.spotube_plugin_jiosaavn.core.Jiosaavn
 
 class RealMetadataUserAPI(

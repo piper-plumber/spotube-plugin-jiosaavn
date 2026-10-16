@@ -1,9 +1,9 @@
 package io.github.piper_plumber.spotube_plugin_jiosaavn.core
 
-import dev.krtirtho.plugin_interfaces.extras.spotor.JsonContentSerializer
-import dev.krtirtho.plugin_interfaces.extras.spotor.SpotrClient
-import dev.krtirtho.plugin_interfaces.host_apis.Cookie
-import dev.krtirtho.plugin_interfaces.host_apis.HttpClientAPI
+import org.spotube.plugin_interfaces.extras.spotor.JsonContentSerializer
+import org.spotube.plugin_interfaces.extras.spotor.SpotrClient
+import org.spotube.plugin_interfaces.host_apis.Cookie
+import org.spotube.plugin_interfaces.host_apis.HttpClientAPI
 import kotlinx.serialization.json.Json
 
 internal fun withDefaultQueryParams(params: Map<String, String> = emptyMap()): Map<String, String> {
