@@ -35,11 +35,76 @@ class RealMetadataBrowseAPI(
     }
 
     override suspend fun genres(): List<MetadataBrowseGenre> {
-        // JioSaavn has no genre taxonomy; list() always returns the home feed.
-        return listOf(MetadataBrowseGenre(id = "home-genre", name = "All"))
+        // JioSaavn has no real genres; approximate them with its feeds and languages.
+        return buildList {
+            add(MetadataBrowseGenre(id = HOME_GENRE, name = "All"))
+            add(MetadataBrowseGenre(id = CHARTS_GENRE, name = "Charts"))
+            add(MetadataBrowseGenre(id = NEW_ALBUMS_GENRE, name = "New Releases"))
+            add(MetadataBrowseGenre(id = TOP_SEARCHES_GENRE, name = "Top Searches"))
+            LANGUAGES.forEach { language ->
+                add(MetadataBrowseGenre(id = LANGUAGE_PREFIX + language, name = language.replaceFirstChar { it.uppercase() }))
+            }
+        }
     }
 
     override suspend fun list(genreId: String, pagination: PaginationStrategy?): PaginationResult<MetadataBrowseSection> {
+        val sections = when {
+            genreId == CHARTS_GENRE -> chartsSections()
+            genreId == NEW_ALBUMS_GENRE -> newAlbumsSections()
+            genreId == TOP_SEARCHES_GENRE -> topSearchesSections()
+            genreId.startsWith(LANGUAGE_PREFIX) -> languageSections(genreId.removePrefix(LANGUAGE_PREFIX))
+            else -> return homeFeed()
+        }
+        return PaginationResult(items = sections, totalCount = sections.size, nextPagination = null)
+    }
+
+    private suspend fun chartsSections(): List<MetadataBrowseSection> {
+        val charts = jiosaavn.content.getCharts()
+        return listOfNotNull(
+            charts.takeIf { it.isNotEmpty() }?.let {
+                MetadataBrowseSection(title = "Charts", description = "Music charts", items = it.map { c -> c.toChartBrowseItem() })
+            }
+        )
+    }
+
+    private suspend fun newAlbumsSections(): List<MetadataBrowseSection> {
+        val albums = jiosaavn.content.getAlbums(n = 20)
+        return listOfNotNull(
+            albums.takeIf { it.isNotEmpty() }?.let {
+                MetadataBrowseSection(
+                    title = "New Albums",
+                    description = "Recently released albums",
+                    items = it.map { a -> a.toAlbumBrowseItem() },
+                    moreLink = "content.getAlbums"
+                )
+            }
+        )
+    }
+
+    private suspend fun topSearchesSections(): List<MetadataBrowseSection> {
+        val topSearches = jiosaavn.content.getTopSearches()
+        return listOfNotNull(
+            topSearches.takeIf { it.isNotEmpty() }?.let {
+                MetadataBrowseSection(title = "Top Searches", description = "Most searched content", items = it.map { t -> t.toTopSearchBrowseItem() })
+            }
+        )
+    }
+
+    private suspend fun languageSections(language: String): List<MetadataBrowseSection> {
+        val label = language.replaceFirstChar { it.uppercase() }
+        val trending = jiosaavn.content.getTrending(language = language)
+        val featured = jiosaavn.content.getFeaturedPlaylists(n = 20, language = language)
+        return listOfNotNull(
+            trending.takeIf { it.isNotEmpty() }?.let {
+                MetadataBrowseSection(title = "Trending in $label", items = it.map { t -> t.toTrendingBrowseItem() })
+            },
+            featured.takeIf { it.isNotEmpty() }?.let {
+                MetadataBrowseSection(title = "$label Playlists", items = it.map { p -> p.toPlaylistBrowseItem() })
+            },
+        )
+    }
+
+    private suspend fun homeFeed(): PaginationResult<MetadataBrowseSection> {
         val launchData = jiosaavn.webapi.getLaunchData()
         val albums = jiosaavn.content.getAlbums(n = 20)
         val topSearches = jiosaavn.content.getTopSearches()
@@ -336,6 +401,18 @@ class RealMetadataBrowseAPI(
             name = this.name,
             thumbnails = listOfNotNull(this.image).map { Thumbnail(url = it, width = 500, height = 500) },
             externalUri = this.permaUrl
+        )
+    }
+
+    private companion object {
+        const val HOME_GENRE = "home-genre"
+        const val CHARTS_GENRE = "charts"
+        const val NEW_ALBUMS_GENRE = "new-albums"
+        const val TOP_SEARCHES_GENRE = "top-searches"
+        const val LANGUAGE_PREFIX = "language:"
+        val LANGUAGES = listOf(
+            "hindi", "english", "punjabi", "tamil", "telugu", "marathi", "gujarati",
+            "bengali", "kannada", "bhojpuri", "malayalam", "urdu", "haryanvi", "rajasthani", "odia", "assamese",
         )
     }
 }
