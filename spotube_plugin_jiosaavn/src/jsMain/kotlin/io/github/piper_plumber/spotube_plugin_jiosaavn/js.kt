@@ -52,7 +52,7 @@ fun main() {
 
         val client = Jiosaavn(httpClient)
 
-        zipline.bind<CoreAPI>(CoreAPI_SERVICE_NAME, RealCoreAPI(webview, storage, client))
+        zipline.bind<CoreAPI>(CoreAPI_SERVICE_NAME, RealCoreAPI(webview, storage, client, httpClient))
 
         zipline.bind<MetadataAlbumAPI>(MetadataAlbumAPI_SERVICE_NAME, RealMetadataAlbumAPI(client))
         zipline.bind<MetadataArtistAPI>(
