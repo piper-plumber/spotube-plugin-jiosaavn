@@ -16,7 +16,7 @@ plugins {
 
 spotubePlugin {
     name = "JioSaavn"
-    version = "0.1.0"
+    version = "0.2.0"
     apiVersion = "0.1.0"
     description = "JioSaavn plugin for Spotube"
     author = "Piper Plumber"
