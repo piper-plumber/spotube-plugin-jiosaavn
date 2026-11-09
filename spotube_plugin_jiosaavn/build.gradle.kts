@@ -17,7 +17,7 @@ plugins {
 spotubePlugin {
     name = "JioSaavn"
     version = "0.1.0"
-    apiVersion = "0.0.1"
+    apiVersion = "0.1.0"
     description = "JioSaavn plugin for Spotube"
     author = "Piper Plumber"
     capabilities = listOf(
@@ -26,6 +26,8 @@ spotubePlugin {
         PluginCapability.WEBVIEW
     )
     abilities = listOf(PluginAbility.METADATA, PluginAbility.AUDIO)
+    // getCookies("https://www.jiosaavn.com") to read the login "I" cookie
+    cookieDomains = listOf("www.jiosaavn.com")
     license = "AGPL-3.0-or-later"
     contact = "308775074+piper-plumber@users.noreply.github.com"
     repository = "https://github.com/piper.plumber/spotube-plugin-jiosaavn"
