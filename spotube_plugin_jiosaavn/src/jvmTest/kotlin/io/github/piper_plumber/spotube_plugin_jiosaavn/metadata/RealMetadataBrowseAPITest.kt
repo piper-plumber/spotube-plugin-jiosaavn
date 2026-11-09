@@ -102,7 +102,7 @@ class RealMetadataBrowseAPITest {
 
     @Test
     fun `test list returns sections from second row onwards`() = runTest {
-        val result = client.list(null)
+        val result = client.list("home-genre", null)
 
         assertTrue(result.items.isNotEmpty(), "Browse list should return sections")
         result.items.forEach { section ->
@@ -112,9 +112,9 @@ class RealMetadataBrowseAPITest {
 
     @Test
     fun `test sublist returns items for valid section`() = runTest {
-        val sections = client.list(null)
+        val sections = client.list("home-genre", null)
         val firstSection = sections.items.find { it.moreLink != null }
-        val result = client.sublist(firstSection!!.moreLink!!, null)
+        val result = client.sublist("home-genre", firstSection!!.moreLink!!, null)
 
         assertTrue(result.items.isNotEmpty(), "Sublist should return items for valid section")
         result.items.forEach { item ->
@@ -130,7 +130,7 @@ class RealMetadataBrowseAPITest {
 
     @Test
     fun `test sublist returns empty for invalid section`() = runTest {
-        val result = client.sublist("nonexistent_section_xyz", null)
+        val result = client.sublist("home-genre", "nonexistent_section_xyz", null)
 
         assertTrue(result.items.isEmpty(), "Sublist should return empty list for invalid section")
     }

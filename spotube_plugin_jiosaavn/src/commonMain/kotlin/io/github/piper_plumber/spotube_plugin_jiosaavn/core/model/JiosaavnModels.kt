@@ -1,10 +1,14 @@
 package io.github.piper_plumber.spotube_plugin_jiosaavn.core.model
 
+import kotlinx.serialization.ExperimentalSerializationApi
+import kotlinx.serialization.KSerializer
+import kotlinx.serialization.KeepGeneratedSerializer
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonContentPolymorphicSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.JsonTransformingSerializer
 import kotlinx.serialization.json.jsonPrimitive
 
 data class IdTokenPair(
@@ -197,7 +201,9 @@ data class LibraryMiniAlbum(
     val miniObj: Boolean? = null,
 )
 
-@Serializable
+@OptIn(ExperimentalSerializationApi::class)
+@KeepGeneratedSerializer
+@Serializable(with = LibraryMiniAlbumMoreInfoSerializer::class)
 data class LibraryMiniAlbumMoreInfo(
     @SerialName("artistMap")
     val artistMap: ArtistMap? = null,
@@ -245,7 +251,9 @@ data class LibraryMiniPlaylist(
     val proHvaCampaigns: List<String>? = null,
 )
 
-@Serializable
+@OptIn(ExperimentalSerializationApi::class)
+@KeepGeneratedSerializer
+@Serializable(with = LibraryMiniPlaylistMoreInfoSerializer::class)
 data class LibraryMiniPlaylistMoreInfo(
     @SerialName("listid")
     val listId: String? = null,
@@ -447,7 +455,9 @@ data class RadioStation(
     val miniObj: Boolean? = null,
 )
 
-@Serializable
+@OptIn(ExperimentalSerializationApi::class)
+@KeepGeneratedSerializer
+@Serializable(with = RadioStationMoreInfoSerializer::class)
 data class RadioStationMoreInfo(
     @SerialName("description")
     val description: String? = null,
@@ -468,7 +478,7 @@ data class RadioStationMoreInfo(
 @Serializable
 data class LaunchData(
     @SerialName("history")
-    val history: List<Song>? = null,
+    val history: List<LaunchItem>? = null,
     @SerialName("new_trending")
     val newTrending: List<LaunchItem>? = null,
     @SerialName("top_playlists")
@@ -954,7 +964,9 @@ data class SearchAlbumResult(
     val moreInfo: SearchAlbumMoreInfo,
 )
 
-@Serializable
+@OptIn(ExperimentalSerializationApi::class)
+@KeepGeneratedSerializer
+@Serializable(with = SearchAlbumMoreInfoSerializer::class)
 data class SearchAlbumMoreInfo(
     @SerialName("query")
     val query: String? = null,
@@ -1020,7 +1032,9 @@ data class SearchPlaylistResult(
     val numSongs: Int? = null,
 )
 
-@Serializable
+@OptIn(ExperimentalSerializationApi::class)
+@KeepGeneratedSerializer
+@Serializable(with = SearchPlaylistMoreInfoSerializer::class)
 data class SearchPlaylistMoreInfo(
     @SerialName("uid")
     val uid: String? = null,
@@ -1126,7 +1140,9 @@ data class Album(
     val moreInfo: AlbumMoreInfo? = null,
 )
 
-@Serializable
+@OptIn(ExperimentalSerializationApi::class)
+@KeepGeneratedSerializer
+@Serializable(with = AlbumMoreInfoSerializer::class)
 data class AlbumMoreInfo(
     @SerialName("release_date")
     val releaseDate: String? = null,
@@ -1158,7 +1174,9 @@ data class Chart(
     val moreInfo: ChartMoreInfo,
 )
 
-@Serializable
+@OptIn(ExperimentalSerializationApi::class)
+@KeepGeneratedSerializer
+@Serializable(with = ChartMoreInfoSerializer::class)
 data class ChartMoreInfo(
     @SerialName("firstname")
     val firstName: String? = null,
@@ -1188,7 +1206,9 @@ data class CompactPlaylist(
     val numSongs: Int? = null,
 )
 
-@Serializable
+@OptIn(ExperimentalSerializationApi::class)
+@KeepGeneratedSerializer
+@Serializable(with = CompactPlaylistMoreInfoSerializer::class)
 data class CompactPlaylistMoreInfo(
     @SerialName("uid")
     val uid: String? = null,
@@ -1234,7 +1254,9 @@ data class Playlist(
     val moreInfo: PlaylistMoreInfo,
 )
 
-@Serializable
+@OptIn(ExperimentalSerializationApi::class)
+@KeepGeneratedSerializer
+@Serializable(with = PlaylistMoreInfoSerializer::class)
 data class PlaylistMoreInfo(
     @SerialName("listid")
     val listId: String? = null,
@@ -1319,7 +1341,9 @@ data class Song(
     val proHvaCampaigns: List<String>? = null,
 )
 
-@Serializable
+@OptIn(ExperimentalSerializationApi::class)
+@KeepGeneratedSerializer
+@Serializable(with = SongMoreInfoSerializer::class)
 data class SongMoreInfo(
     @SerialName("music")
     val music: String? = null,
@@ -1413,7 +1437,9 @@ data class TopSearch(
     val moreInfo: TopSearchMoreInfo,
 )
 
-@Serializable
+@OptIn(ExperimentalSerializationApi::class)
+@KeepGeneratedSerializer
+@Serializable(with = TopSearchMoreInfoSerializer::class)
 data class TopSearchMoreInfo(
     @SerialName("release_date")
     val releaseDate: String? = null,
@@ -1449,7 +1475,9 @@ data class TopShow(
     val moreInfo: TopShowMoreInfo,
 )
 
-@Serializable
+@OptIn(ExperimentalSerializationApi::class)
+@KeepGeneratedSerializer
+@Serializable(with = TopShowMoreInfoSerializer::class)
 data class TopShowMoreInfo(
     @SerialName("release_date")
     val releaseDate: String? = null,
@@ -1493,7 +1521,9 @@ data class ContentGetAlbumsResponse(
     val lastPage: Boolean,
 )
 
-@Serializable
+@OptIn(ExperimentalSerializationApi::class)
+@KeepGeneratedSerializer
+@Serializable(with = TrendingMoreInfoSerializer::class)
 data class TrendingMoreInfo(
     @SerialName("release_date")
     val releaseDate: String? = null,
@@ -1545,7 +1575,9 @@ data class PlaylistDetails(
     val moreInfo: PlaylistDetailsMoreInfo,
 )
 
-@Serializable
+@OptIn(ExperimentalSerializationApi::class)
+@KeepGeneratedSerializer
+@Serializable(with = PlaylistDetailsMoreInfoSerializer::class)
 data class PlaylistDetailsMoreInfo(
     @SerialName("follower_count")
     val followerCount: String? = null,
@@ -1668,3 +1700,31 @@ data class UserFollowedBy(
     @SerialName("usersCount")
     val usersCount: Int,
 )
+
+// ==================== more_info leniency ====================
+
+/**
+ * JioSaavn returns `"more_info": []` (an empty PHP array) instead of an object for
+ * some items (e.g. history entries, playlist details). Treat any non-object value
+ * as an empty object so every `*MoreInfo` decodes with its defaults.
+ */
+abstract class LenientObjectSerializer<T : Any>(serializer: KSerializer<T>) :
+    JsonTransformingSerializer<T>(serializer) {
+    override fun transformDeserialize(element: JsonElement): JsonElement =
+        element as? JsonObject ?: JsonObject(emptyMap())
+}
+
+object LibraryMiniAlbumMoreInfoSerializer : LenientObjectSerializer<LibraryMiniAlbumMoreInfo>(LibraryMiniAlbumMoreInfo.generatedSerializer())
+object LibraryMiniPlaylistMoreInfoSerializer : LenientObjectSerializer<LibraryMiniPlaylistMoreInfo>(LibraryMiniPlaylistMoreInfo.generatedSerializer())
+object RadioStationMoreInfoSerializer : LenientObjectSerializer<RadioStationMoreInfo>(RadioStationMoreInfo.generatedSerializer())
+object SearchAlbumMoreInfoSerializer : LenientObjectSerializer<SearchAlbumMoreInfo>(SearchAlbumMoreInfo.generatedSerializer())
+object SearchPlaylistMoreInfoSerializer : LenientObjectSerializer<SearchPlaylistMoreInfo>(SearchPlaylistMoreInfo.generatedSerializer())
+object AlbumMoreInfoSerializer : LenientObjectSerializer<AlbumMoreInfo>(AlbumMoreInfo.generatedSerializer())
+object ChartMoreInfoSerializer : LenientObjectSerializer<ChartMoreInfo>(ChartMoreInfo.generatedSerializer())
+object CompactPlaylistMoreInfoSerializer : LenientObjectSerializer<CompactPlaylistMoreInfo>(CompactPlaylistMoreInfo.generatedSerializer())
+object PlaylistMoreInfoSerializer : LenientObjectSerializer<PlaylistMoreInfo>(PlaylistMoreInfo.generatedSerializer())
+object SongMoreInfoSerializer : LenientObjectSerializer<SongMoreInfo>(SongMoreInfo.generatedSerializer())
+object TopSearchMoreInfoSerializer : LenientObjectSerializer<TopSearchMoreInfo>(TopSearchMoreInfo.generatedSerializer())
+object TopShowMoreInfoSerializer : LenientObjectSerializer<TopShowMoreInfo>(TopShowMoreInfo.generatedSerializer())
+object TrendingMoreInfoSerializer : LenientObjectSerializer<TrendingMoreInfo>(TrendingMoreInfo.generatedSerializer())
+object PlaylistDetailsMoreInfoSerializer : LenientObjectSerializer<PlaylistDetailsMoreInfo>(PlaylistDetailsMoreInfo.generatedSerializer())

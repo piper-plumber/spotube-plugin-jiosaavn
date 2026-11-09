@@ -10,6 +10,10 @@
 - Declare `cookieDomains` for the WebView login, target plugin API 0.1.0, and update `spotube-gradle` to 0.2.0 (`6b85b6e`).
 - Check GitHub releases for plugin updates (`df269ee`).
 
+### Fixes
+- Fix the home page crashing for logged-in users when JioSaavn returns `"more_info": []` (e.g. playlists in listening history or playlist details) (#2).
+- Fix broken repository and issues links in the plugin details (#1).
+
 ### Chore
 - Bump plugin version to 0.2.0 (`c90ca84`).
 

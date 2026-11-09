@@ -30,8 +30,8 @@ spotubePlugin {
     cookieDomains = listOf("www.jiosaavn.com")
     license = "AGPL-3.0-or-later"
     contact = "308775074+piper-plumber@users.noreply.github.com"
-    repository = "https://github.com/piper.plumber/spotube-plugin-jiosaavn"
-    bugs = "https://github.com/piper.plumber/spotube-plugin-jiosaavn/issues"
+    repository = "https://github.com/piper-plumber/spotube-plugin-jiosaavn"
+    bugs = "https://github.com/piper-plumber/spotube-plugin-jiosaavn/issues"
 }
 
 
